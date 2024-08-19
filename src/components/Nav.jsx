@@ -177,7 +177,7 @@ function Nav({ URL }) {
               {URL === "/" ? (
                 <section className="flex flex-col">
                   <a
-                    href=""
+                    href="#galeria"
                     className="cursor-pointer text-3xl py-4 hover:text-black"
                   >
                     Galería
@@ -197,7 +197,7 @@ function Nav({ URL }) {
                     Paquetes
                   </a>
                   <a
-                    href=""
+                    href="#blog"
                     className="cursor-pointer text-3xl py-4 hover:text-black"
                   >
                     Blog
