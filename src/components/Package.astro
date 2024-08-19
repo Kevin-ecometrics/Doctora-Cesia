@@ -1,0 +1,58 @@
+---
+import Packages from "./Package";
+let packages = [
+  {
+    name: "Ginecológico básico",
+    price: "1200 MXN",
+    description1: "Consulta médica e historia clínica completa",
+    description2: "Exploración clínica de mamas",
+    description3: "Ultrasonido pélvico o endovaginal + plan de manejo",
+
+    background: "bg-[#B09FCD]",
+    image: "/package1.webp",
+    modalDescription:
+      "En esta visita se busca conocer y explorar tu estado de salud general la revisión de mamas permite detectar a tiempo algún signo o anomalía. Mientras que el ultrasonido ginecológico nos permite observar si existen quistes, anomalías uterinas, pólipos uterinos fibromas entre otras afecciones.",
+  },
+  {
+    name: "Ginecológico y Papanicolau",
+    price: "1600 MXN",
+    description1: "Ginecológico",
+    description2: "Toma de muestra de Papanicolau",
+    description3:
+      "Entrega de reporte e interpretación al contar con el estudio",
+    background: "bg-[#FABB70]",
+    image: "/package2.webp",
+    modalDescription:
+      "Durante la toma de muestra de Papanicolaou se buscan anomalías en las células cervicales antes de que se conviertan en cáncer también se utiliza para detectar VPH.",
+  },
+  {
+    name: "Ginecológico + Papanicolau + Colposcopia",
+    price: "1800 MXN",
+    description1: "Ginecológico básico + toma de muestra de Papanicolau",
+    description2: "Con entrega de reporte e interpretación",
+    description3: "Realización de colposcopia y plan de manejo",
+    background: "bg-[#E2E479]",
+    image: "/package3.webp",
+    modalDescription:
+      "Durante el papanicolaou se recolecta las células de cuello uterino para enviarlas al laboratorio para examinarse y la colposcopia examina detenidamente el cuello del útero la vagina y la vulva mediante un instrumento llamado colposcopio que permite diagnosticar verrugas genitales, cervicitis, y cambios en el tejido.",
+  },
+  // {
+  //   name: "Inserción DIU de cobre",
+  //   price: "2800 MXN",
+  //   description1: "",
+  //   description2: "",
+  //   description3: "",
+  //   background: "bg-[#7DCAD9]",
+  // },
+];
+---
+
+<main
+  id="paquetes"
+  class="flex justify-center items-center flex-col md:mt-32 mb-8"
+>
+  <h1 class="font-bold uppercase font-glorich text-3xl md:text-7xl py-8 mb-8">
+    Paquetes
+  </h1>
+  <Packages client:visible packages={packages} />
+</main>

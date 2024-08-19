@@ -1,0 +1,100 @@
+---
+import { Image } from "astro:assets";
+import Planta1 from "@public/Ginecologia feminista en Tijuana.webp";
+import Planta2 from "@public/La Dra Cesia Borjon esta cerca de ti para facilitar un servicio medico de calidad.webp";
+import About1 from "@public/Atencion ginecologica de vanguardia.webp";
+import About2 from "@public/Sientete segurx y acompanadx con la Dra Cesia.webp";
+---
+
+<section
+  id="about"
+  class="bg-[#E2E479] flex justify-center items-center px-8 py-16 text-white md:mt-32"
+>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-[80%]">
+    <div class="col-span-1 md:col-span-1">
+      <div class="flex gap-8">
+        <Image
+          id="planta1"
+          src={Planta1}
+          class="animate-spin"
+          alt="La ginecología feminista para el bienestar de todxs "
+          title="La ginecología feminista para el bienestar de todxs "
+        />
+        <Image
+          id="planta2"
+          src={Planta2}
+          alt="Tu revisión ginecológica con La Dra. Cesia te ofrece tranquilidad y protección"
+          title="Tu revisión ginecológica con La Dra. Cesia te ofrece tranquilidad y protección"
+        />
+      </div>
+      <Image
+        src={About2}
+        alt="Atención y cuidado ginecológico de vanguardia "
+        title="Atención y cuidado ginecológico de vanguardia "
+      />
+    </div>
+    <div class="md:col-span-2">
+      <div class="flex flex-col md:flex-row gap-4 mb-16 items-center">
+        <Image
+          src={About1}
+          class="w-48 h-2/4"
+          alt="Sientete segurx y acompañadx en tu primera visita ginecologica con la Dra Cesia "
+          title="Sientete segurx y acompañadx en tu primera visita ginecologica con la Dra Cesia "
+        />
+        <span
+          class="font-glorich font-medium text-[35px] md:text-[60px] m-0 p-0"
+        >
+          Hola, bienvenid<span id="dynamic-text">o</span>
+          <br />
+          <span
+            class="font-glorich font-medium text-[25px] md:text-[50px] m-0 p-0"
+          >
+            a tu espacio seguro
+          </span>
+        </span>
+      </div>
+      <h2 class="font-binomaRegular text-[20px] md:text-[25px]">
+        Respetuoso, que se esfuerza por protegerte y acompañarte en tu viaje
+        hacia la salud ginecológica y obstetricia con libertad.
+        <br />
+
+        <br />
+        Este espacio tiene como objetivo empoderar tu cuerpo, tus sentimientos, tus
+        límites y autonomía; y lo más importante, presentarte las herramientas para
+        tu bienestar.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<script>
+  const words = ["o", "a", "e", "x"];
+  let wordIndex = Math.floor(Math.random() * words.length); // Índice inicial aleatorio
+
+  function changeWord() {
+    const wordElement = document.getElementById("dynamic-text");
+    wordElement.style.opacity = "0"; // Inicia la transición de desvanecimiento
+    setTimeout(() => {
+      wordElement.textContent = words[wordIndex];
+      wordElement.style.opacity = "1"; // Inicia la transición de aparición
+      wordIndex = (wordIndex + 1) % words.length;
+    }, 1000); // Espera a que la transición de desvanecimiento termine
+  }
+
+  setInterval(changeWord, 3000);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const planta1 = document.getElementById("planta1");
+    const planta2 = document.getElementById("planta2");
+
+    planta2.addEventListener("mouseover", () => {
+      planta1.classList.remove("animate-spin");
+      planta2.classList.add("animate-spin");
+    });
+
+    planta2.addEventListener("mouseout", () => {
+      planta1.classList.add("animate-spin");
+      planta2.classList.remove("animate-spin");
+    });
+  });
+</script>

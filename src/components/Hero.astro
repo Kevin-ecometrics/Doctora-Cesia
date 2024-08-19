@@ -1,0 +1,95 @@
+---
+import { Image } from "astro:assets";
+import HeroImage from "@components/assets/Dra Cesia la mejor ginecoobstetra feminista en Tijuana.webp";
+import Flower from "@components/assets/Cesia Borjon brinda Atencion  ginecologia consciente .png";
+import Facebook from "@components/assets/icons/facebook.astro";
+import Instagram from "@components/assets/icons/Instagram.astro";
+import Thread from "@components/assets/icons/thread.astro";
+import Tiktok from "@components/assets/icons/tiktok.astro";
+const { title } = Astro.props;
+---
+
+<main
+  class="md:h-screen mx-auto md:w-[90%] px-8 md:py-0 py-8 text-black flex justify-center items-center"
+>
+  <div class="grid grid-cols-1 md:grid-cols-2 px-8">
+    <div class="flex justify-center items-center flex-col">
+      <h1
+        class="font-black font-glorich text-[#FABB70] text-[40px] md:text-[80px]"
+      >
+        {title}
+      </h1>
+      <p class="text-[#626262] text-[20px] md:text-[25px] font-binomaRegular">
+        Hola, Soy la doctora Cesia Borjón Ginecoobstetra consciente con tu salud
+        y sentipensar con más de quince años de experiencia, egresada de la
+        U.N.A.M.
+      </p>
+    </div>
+    <div class="flex justify-center items-center">
+      <Image
+        src={HeroImage}
+        alt="Cesia Borjón es reconocida por su atención medica con perspectiva de genero"
+        title="Cesia Borjón es reconocida por su atención medica con perspectiva de genero"
+      />
+      <div class="absolute hidden md:block top-64 right-48 animate-spin">
+        <Image
+          src={Flower}
+          alt="Atención empática y consciente con perspectiva de genero  "
+          title="Atención empática y consciente con perspectiva de genero  "
+          class="size-[144px]"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="hidden md:block">
+    <div
+      class="absolute bottom-[-30px] md:right-10 md:bottom-0 flex flex-row md:flex-col gap-4"
+    >
+      <a
+        target="_blank"
+        href="https://www.instagram.com/dracesiaborjonginecologa/"
+      >
+        <Instagram class="cursor-pointer" />
+      </a>
+      <a target="_blank" href="https://www.facebook.com/ginecologahermosillo/">
+        <Facebook class="cursor-pointer" />
+      </a>
+      <a target="_blank" href="https://www.tiktok.com/@ginecesiaborjon">
+        <Tiktok class="cursor-pointer" />
+      </a>
+      <a
+        target="_blank"
+        href="https://www.threads.net/@dracesiaborjonginecologa?xmt=AQGzDYoTSWZoqF1UnIXONVmb_6WfKrrWDU9QEumtdr-rddY"
+      >
+        <Thread class="cursor-pointer" />
+      </a>
+    </div>
+  </div>
+  <div class="absolute left-10 bottom-[-80px] hidden md:block">
+    <a href="#about">
+      <svg
+        width="80"
+        height="80"
+        viewBox="0 0 119 119"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_515_372)">
+          <circle cx="59.5" cy="59.5" r="57.5" stroke="#B09FCD" stroke-width="4"
+          ></circle>
+          <path
+            d="M38 60.3077L59.5 82L81 60.3077M59.5 78.9872V35"
+            stroke="#B09FCD"
+            stroke-width="4"
+            stroke-miterlimit="10"
+            stroke-linecap="square"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_515_372">
+            <rect width="119" height="119" fill="white"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+    </a>
+  </div>
+</main>

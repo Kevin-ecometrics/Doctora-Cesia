@@ -1,0 +1,151 @@
+---
+import Contact from "@components/ContactMe.astro";
+import Layout from "@layouts/Layout.astro";
+import { slide } from "astro:transitions";
+import Service from "@components/Services";
+
+let servicios = [
+  {
+    title: "Check Up Ginecológico",
+    image:
+      "/Todo lo que debes saber del check up ginecologico con la Dra. Cesia.webp",
+    imageInside:
+      "/Conoce la importancia del check up ginecologico con Cesia.webp",
+    description:
+      "Las necesidades de salud de cada unx varia ampliamente y aquí estoy para ofrecer un enfoque personalizado y compasivo para que en cada etapa de tu vida en consulta ginecológica sea abordada desde tus necesidades y objetivos, por ejemplo: Podemos abordar revisiones de rutina, anticoncepción, y tratamiento de condiciones ginecológicas complejas. Durante el abordaje se llenará un consentimiento informado para tener un acercamiento respetuoso antes de aplicar alguna técnica.  ",
+  },
+  {
+    title: "Infecciones de ETS y tratamiento",
+    image: "/ETS.webp",
+    imageInside: "/ETSportada.webp",
+    description:
+      "Las infecciones de transmisión sexual son provocadas por bacterias, virus o parásitos y se pueden transmitir de una persona a otra a través de la sangre, el semen, los fluidos vaginales y otros líquidos corporales.  Estas infecciones pueden o no presentar síntomas, por lo que es crucial asistir a revisiones periódicas. Es bastante común contraer estas infecciones. Las ETS causadas por bacterias o parásitos pueden ser tratadas con medicamentos y antibióticos, mientras que las infecciones virales no tienen cura definitiva, pero el tratamiento puede ayudar a aliviar o eliminar los síntomas y a controlar la infección. ",
+  },
+  {
+    title: "VPH (Virus del Papiloma Humano)",
+    image: "/VPH.webp",
+    imageInside: "/VPHportada.webp",
+    description:
+      "Los virus del papiloma humano son más de 200 tipos. Algunos de estos virus pueden causar verrugas genitales, pero otros se asocian a patologías malignas como cáncer del cuello del útero, vagina, vulva y de tracto respiratorio superior.<br /><br /> Cerca del 80% de la población en algún punto de la vida tendrá la infección por el virus del papiloma humano, sin embargo, no en todas las personas presentan alguna padecimiento maligno debido a a que nuestro sistema inmunólogo es capaz de manejar la infección.<br /><br /> Para saber si tienes el virus del papiloma humano es necesario realizar una PCR que es un estudio que toma muestra de la secreción vaginal, cervical o por la uretra y nos dice que tipo de virus tenemos.<br /><br /> Recuerda que la mejor medicina es la preventiva, ya existe una vacuna contra el virus del papiloma humano que se llama Gardasil 9 que protege contra los virus más frecuentes y más malignos como lo son el 6, 11, 16, 18, 31, 33,45, 52, 58.<br /><br /> *La vacuna se recomienda para todas las personas a partir de los 11 años de edad*",
+  },
+  {
+    title: "Anticoncepción",
+    image: "/ANTI.webp",
+    imageInside: "/ANTIportada.webp",
+    description:
+      "La planeación y uso de tu método anticonceptivo será con base a tu salud, ya que existen determinadaspatologías o alteraciones que pueden determinar que métodos son más convenientes. Factores como: Estilo de vida y metas serán importantes para acompañarte en la elección más adecuada con la que te sientas con mayor comodidad.<br /><br /> Durante este proceso el objetivo es tu bienestar validando tus metas presentes y futuras brindándote guianza para que estés protegidx contra infecciones de transmisión sexual. En cuanto a los métodos anticonceptivos que podemos ofertarte existen los hormonales que vienen en distintas presentaciones y no hormonales como el DIU de cobre o plata.<br /><br /> Te recomiendo acudir a una consulta de evaluación para ver cuál es el ideal para ti",
+  },
+  {
+    title: "Aborto seguro y libre de estigmas",
+    image: "/ABORTO.webp",
+    imageInside: "/ABORTOportada.webp",
+    description:
+      "Tu Cuerpo, Tu Decisión, Tu Espacio” para que elijas libremente sobre tus derechos sexuales, reproductivOs y no reproductivos, sin estigmas. La maternidad debe ser una elección y no una imposición. Estamos aquí para acompañarte y orientarte con empatía, sobre todo con seguridad para el cuidado de tu salud y prosperidad. Recuerda, No estás solx en este proceso ",
+  },
+  {
+    title: "Cirugía ginecológica de vanguardia ",
+    image: "/VANGUARDIA.webp",
+    imageInside: "/VANGUARDIAportada.webp",
+    description:
+      "Mereces los mejores tratamientos, es por eso que abordamos la Ginecología con vanguardia. Mi entrenamiento en cirugía de mínima invasión como lo es la video laparoscopia, histeroscopia y robótica, son técnicas novedosas que nos permite tratar enfermedades con las intervenciones más gentiles, para que tu recuperación sea más veloz con un porcentaje mínimo de riesgo durante tu proceso operatorio. <br /><br /> Las cirugías que podemos llevar a cabo con mínima invasión son: Retirar quistes de ovario, resección de endometriosis, remover el útero (histerectomía), remover embarazo tubárico o ectópico, retirar miomas uterinos, pólipos en el endometrio, entre muchas otras patologías. <br /><br /> Acércate con nosotros para una evaluación, trabajamos con todos los seguros de gastos médicos mayores para tu cirugía. ",
+  },
+  {
+    title: "Enfermedades de la vulva ",
+    image: "/VULVA.webp",
+    imageInside: "/VULVAportada.webp",
+    description:
+      "Existen múltiples patologías que pueden afectar la vulva. Desde dolor, inflamación, infección o irritación vulvar. El tratamiento de estas condiciones depende de una minuciosa evaluación clínica, así como probablemente la toma de biopsia. Recuerda que puedas agendar de varias formas para tu mayor comodidad, lo importante es tu bienestar, deseo brindarte toda la ayuda que requieres, recuerda no estás solx.",
+  },
+  {
+    title: "Embarazo y parto humanizado ",
+    image: "/HUMANIZADO.webp",
+    imageInside: "/HUMANIZADOportada.webp",
+    description:
+      "Durante tu proceso de embarazo, parto y puerperio buscamos respetar tus derechos y los de tu bebé. En el embarazo llevaremos las consultas de control prenatal en donde te sientas informadx, acompañadx y seas la protagonista de tu proceso. <br /><br /> Al avanzar tu embarazo, podrás realizar tu plan de parto donde se plasmen tus deseos y necesidades de acuerdo a tus preferencias, y cultura. Fomentamos siempre el nacimiento respetado, ya sea por parto vaginal o abdominal, facilitando la toma de decisiones, apego piel con piel, pinzamiento tardío de cordón umbilical y la lactancia materna, para que este momento sea trascendental y enriquecedor.",
+  },
+  {
+    title: "Retiro de verrugas por VPH ",
+    image: "/VERRUGAS.webp",
+    imageInside: "/VERRUGASportada.webp",
+    description:
+      "Las lesiones vulvares pueden ser de diverso origen. Las patologías que más la afectan son la aparición de “bolitas” las cuales pueden ser verrugas genitales por virus del papiloma humano, como molusco contagioso entre otros. Contamos con tecnología láser para el retiro de estas lesiones con la menos molestia posible. Acércate a nuestro consultorio o escríbenos para ponernos en contacto",
+  },
+  {
+    title: "Consulta online  ",
+    image: "/CONSULTA.webp",
+    imageInside: "/CONSULTAportada.webp",
+    description:
+      "Podemos agendar una consulta en línea por medio de videollamada, solo tienes que agendar tu cita mencionando que la consulta será virtual. En la consulta platicaremos acerca de tu historia clínica y te daré la asesoría con base a los problemas que presentes, será un gusto poder ser tu ginecóloga y acompañarte en la resolución de cualquier duda.",
+  },
+  {
+    title: "Aplicación de DIU de Cobre, de Plata y DIU Medicado  ",
+    image: "/DIU.webp",
+    imageInside: "/DIUportada.webp",
+    description:
+      "El dispositivo intrauterino o Diu es un método antifecundativo de larga duración que consiste es un pequeño objeto en forma de T recubierto y se coloca en el interior del útero sobre el endometrio puede ser con hormonas (mia care) o sin hormonas (de cobre o Plata). Lo ideal es que sea colocado durante tu menstruación, sin embargo es una excelente opción como anticonceptivo de emergencia. Durante la asesoría se te informa acerca de beneficios, riesgos, y eficacia. Durante su colocación utilizamos medidas farmacológicas y no farmacológicas para alivio del dolor para que la aplicación genere la menor molestia posible. ",
+  },
+  {
+    title: "DIU  (con hormonas Mia Care)  ",
+    image: "/DIUCARE.webp",
+    imageInside: "/DIUCAREportada.webp",
+    description:
+      "El dispositivo intrauterino con hormonas a base de lebonorgestrel (mia care o mirena) es un aparato que se inserta adentro del útero. Podemos utilizarlo como anticonceptivo o bien para controlar el sangrado menstrual ocasionado por problemas benignos del endometrio. <br /><br /> Si te interesa este dispositivo intrauterino es importante acudir a consulta para evaluación.",
+  },
+  {
+    title: "Implante subdérmico ",
+    image: "/IMPLANTE.webp",
+    imageInside: "/IMPLANTEportada.webp",
+    description:
+      "Este anticonceptivo es una vara flexible de silicón que se aplica debajo de la piel en la cara interna del brazo que libera diariamente una micro dosis de hormona anticonceptiva. Tiene una duración de 3 años. Durante su aplicación se coloca anestesia local para que no exista ninguna molestia o dolor cuando se inserte el implante, una vez terminado puede que aparezca algún moretón. ",
+  },
+  // {
+  //   title: "Retiro de dispositivo intrauterino:  ",
+  //   image: "/INTRAUTERINO.webp",
+  //   imageInside: "/INTRAUTERINOportada.webp",
+  //   description: "Check up básico + retiro de DIU ",
+  // },
+  {
+    title: "Retiro de DIU e implante ",
+    image: "/RETIRO.webp",
+    imageInside: "/RETIROportada.webp",
+    description:
+      "El retiro de del dispositivo intrauterino (DIU) es un procedimiento breve que se puede realizar una  ",
+  },
+  {
+    title: "Esquema de vacunación G A R D A S I L  9 ",
+    image: "/VACUNACION.webp",
+    imageInside: "/VACUNACIONportada.webp",
+    description: `
+      Gardasil 9 está indicada para la inmunización activa de individuos contra el virus del papiloma humano.
+      Puede colocarse a partir de los 11 años hasta los 45 años y aplica para todos los géneros.
+      <br />
+      <br />
+
+      <ol class="list-decimal list-inside pl-4">
+        <li>Protege contra los virus del papiloma humano: 6,11,16,18,31,33,45,52,58 (9 cepas)</li>
+        <li>En Individuos de 11 a 14 años de edad el esquema consta de 2 dosis (0, 6 – 12 meses)</li>
+        <li>En Individuos de 15 años en adelante la pauta de esquema es de tres dosis (0, 2, 6 meses)</li>
+      </ol>
+      <br />
+      No se ha establecido la necesidad de una dosis de refuerzo si completas las dosis del esquema mencionado anteriormente.
+    `,
+  },
+];
+---
+
+<Layout title="Ginecología y obstetricia feminista">
+  <main
+    class="bg-[#FEF5E9] py-8 px-4"
+    transition:animate={slide({ duration: "1s" })}
+  >
+    <section class="bg-[#B09FCD] p-4 rounded-3xl">
+      <h1
+        class="text-white text-4xl md:text-6xl font-glorich font-bold py-8 border-b border-white"
+      >
+        Servicios
+      </h1>
+      <Service services={servicios} client:visible />
+    </section>
+    <Contact />
+  </main>
+</Layout>

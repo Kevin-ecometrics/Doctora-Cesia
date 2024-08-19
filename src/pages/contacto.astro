@@ -1,0 +1,11 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { slide } from "astro:transitions";
+import ContactoForm from "@components/Contact";
+---
+
+<Layout title="Ginecología y obstetricia feminista">
+  <main class="bg-[#FEF5E9]" transition:animate={slide({ duration: "1s" })}>
+    <ContactoForm client:load />
+  </main>
+</Layout>

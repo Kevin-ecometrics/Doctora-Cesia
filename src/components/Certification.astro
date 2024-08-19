@@ -1,0 +1,113 @@
+---
+import { Image } from "astro:assets";
+import Tablet from "@public/tablet.webp";
+import Certificaciones from "@public/certificaciones.png";
+import Facebook from "@public/Facebook.png";
+import Doctoralia from "@public/Doctoralia.png";
+import Instagram from "@public/Instagram.png";
+import threads from "@public/threads.png";
+import TikTok from "@public/TikTok.png";
+import Twitter from "@public/X twitter.png";
+---
+
+<main class="md:h-[684px] p-8 bg-[#B09FCD] mb-8">
+  <h1 class="font-glorich md:text-4xl text-white">Mis</h1>
+  <h1 class="font-glorich md:text-7xl text-white">redes sociales</h1>
+  <p class="font-binomaRegular text-xl text-white">
+    Sígueme y entérate de casos interesantes y muchas curiosidades.
+  </p>
+  <div class="grid grid-cols-1 md:grid-cols-2">
+    <div>
+      <Image src={Certificaciones} alt="test" />
+    </div>
+
+    <div class="flex gap-4">
+      <Image
+        src={Tablet}
+        class="absolute z-30 translate-x-[-120px] translate-y-[-40px]"
+        alt="tablet"
+      />
+      <!-- <div class="absolute z-20 translate-x-[-15px] translate-y-[120px]">
+        <iframe
+          width="590"
+          height="425"
+          src="https://www.youtube.com/embed/iz1EJWEJyLo?si=ZzfOTA26XoKAN6gP"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div> -->
+      <!-- Columna 1 con elementos moviéndose hacia arriba -->
+      <div class="flex flex-col gap-4">
+        <div class="bg-[#D9D9D9] w-[284px] h-[61px] move-up-down">
+          <Image src={Facebook} alt="facebook" />
+        </div>
+        <div class="bg-[#D9D9D9] w-[284px] h-[61px] move-up-down">
+          <Image src={Doctoralia} alt="doctoralia" />
+        </div>
+        <div class="bg-[#D9D9D9] w-[284px] h-[61px] move-up-down">
+          <Image src={Instagram} alt="instagram" />
+        </div>
+      </div>
+      <!-- Columna 2 con elementos moviéndose hacia abajo -->
+      <div class="flex flex-col gap-4">
+        <div class="bg-[#D9D9D9] w-[284px] h-[61px] move-down-up">
+          <Image src={threads} alt="threads" />
+        </div>
+        <div class="bg-[#D9D9D9] w-[284px] h-[61px] move-down-up">
+          <Image src={TikTok} alt="tiktok" />
+        </div>
+        <div class="bg-[#D9D9D9] w-[284px] h-[61px] move-down-up">
+          <Image src={Twitter} alt="twitter" />
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<style>
+  .move-up-down {
+    animation: moveUpDown 7s linear infinite;
+  }
+
+  .move-down-up {
+    animation: moveDownUp 7s linear infinite;
+  }
+
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(0px);
+    }
+    25% {
+      transform: translateY(-130px);
+    }
+    50% {
+      transform: translateY(0px);
+    }
+    75% {
+      transform: translateY(40px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes moveDownUp {
+    0% {
+      transform: translateY(0px);
+    }
+    25% {
+      transform: translateY(40px);
+    }
+    50% {
+      transform: translateY(0px);
+    }
+    75% {
+      transform: translateY(-130px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+</style>

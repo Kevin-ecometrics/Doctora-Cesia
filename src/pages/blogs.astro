@@ -1,0 +1,37 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { fade } from "astro:transitions";
+
+const blogs = [
+  { src: "/Nacimiento Respetuoso.webp", href: "/blog/Acuerpar-el-nacimiento/" },
+  {
+    src: "/BlogAborto.webp",
+
+    href: "/blog/La-esencialidad-y-libertad-que-implica-el-aborto-libre-de-estigma/",
+  },
+  {
+    src: "/Retiro de verrugas por VPH.webp",
+
+    href: "/blog/Que-hacer-si-te-han-detectado-el-virus-del-papiloma-humano/",
+  },
+];
+---
+
+<Layout title="Blog">
+  <main
+    transition:animate={fade({ duration: "1s" })}
+    class="grid md:grid-cols-3 grid-cols-1 md:w-[80%] mx-auto"
+  >
+    {
+      blogs.map((blog) => (
+        <a
+          href={blog.href}
+          class="bg-[#B09FCD] rounded-3xl p-4 m-4"
+          target="_blank"
+        >
+          <img src={blog.src} alt="blog" class="rounded-3xl" />
+        </a>
+      ))
+    }
+  </main>
+</Layout>

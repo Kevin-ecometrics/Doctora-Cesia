@@ -1,0 +1,59 @@
+---
+import Educacion from "@components/Education";
+
+let educations = [
+  {
+    title: "UNIVERSIDAD AUTÓNOMA DE NUEVO LEON.",
+    description:
+      "The Creative Excellent Design award recognizes and celebrates exceptional design achievements, honoring individuals or teams who have demonstrated innovative thinking, artistic excellence, and impactful solutions in their respective design fields.",
+    image: "/certificacion1.webp",
+    list: ["/tituloUANL.webp"],
+  },
+  {
+    title: "UNIVERSIDAD AUTÓNOMA DE MÉXICO.",
+    description:
+      "The Creative Excellent Design award recognizes and celebrates exceptional design achievements, honoring individuals or teams who have demonstrated innovative thinking, artistic excellence, and impactful solutions in their respective design fields.",
+    image: "/certificacion2.webp",
+    list: ["/tituloUNAM.webp", "/Diploma de colposcopia.webp"],
+  },
+  {
+    title: "C.M.G.O. CONSEJO MEXICANO DE GINECOLOGIA Y OBSTETRICA A. C.",
+    description:
+      "The Creative Excellent Design award recognizes and celebrates exceptional design achievements, honoring individuals or teams who have demonstrated innovative thinking, artistic excellence, and impactful solutions in their respective design fields.",
+    image: "/certificacion3.webp",
+    list: [
+      "/comego 2023 a 2028.webp",
+      "/Comego recertificacion 2023.webp",
+      "/consejo de COMEGO.webp",
+      "/constancia de climaterio.webp",
+    ],
+  },
+  {
+    title: "MÁS PARTICIPACIONES",
+    description:
+      "The Creative Excellent Design award recognizes and celebrates exceptional design achievements, honoring individuals or teams who have demonstrated innovative thinking, artistic excellence, and impactful solutions in their respective design fields.",
+    image: "/certificacion4.webp",
+    list: [
+      "/Certificado de patologia vulvar.webp",
+      "/certificado de water birth.webp",
+      "/certificado OPF.webp",
+      "/congreso internacional de endoscopia ginecologica.webp",
+      "/constancia de Curso de parto Humanizado.webp",
+      "/constancia de metodologia de la investigacion.webp",
+      "/Constancia de parto humanizado.webp",
+      "/cuidados maternos y perinatales.webp",
+    ],
+  },
+];
+---
+
+<main class="p-8 bg-white">
+  <section class="bg-[#E2E479] p-4 rounded-3xl mb-8">
+    <h1
+      class="text-black text-3xl md:text-6xl font-glorich font-bold py-8 border-b border-white"
+    >
+      EDUCACIÓN VANGUARDISTA
+    </h1>
+    <Educacion education={educations} client:visible />
+  </section>
+</main>

@@ -1,0 +1,15 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Calendar from "@components/Calendar";
+import { slide } from "astro:transitions";
+---
+
+<Layout title="Ginecología y obstetricia feminista">
+  <main transition:animate={slide({ duration: "1s" })}>
+    <Calendar client:load />
+    <!-- <iframe
+      src="//overcomehelp.appspot.com/public/1kfp6h99l34/schedule"
+      width="600"
+      height="400"></iframe> -->
+  </main>
+</Layout>

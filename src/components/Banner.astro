@@ -1,0 +1,135 @@
+---
+import Diamond from "./assets/icons/diamond.astro";
+
+let projects = [
+  {
+    title: "Derecho",
+    title2: "sexuales ",
+    title3: "y ",
+    title4: "reproductivos  ",
+    title5: "con ",
+    title6: "autonomía ",
+    title7: "y  ",
+    title8: "acompañamiento ",
+    title9: "atención ",
+    title10: "ginecológica ",
+    title11: "empática",
+    title12: "consciente ",
+    title13: "con ",
+    title14: "perspectiva ",
+    title15: "de ",
+    title16: "genero ",
+  },
+];
+---
+
+<section>
+  <div
+    class="md:w-full bg-[#FABB70] h-[90px] flex items-center justify-center md:rotate-3 md:absolute overflow-x-hidden"
+  >
+    <div class="banner-infinito flex items-center gap-4">
+      {
+        projects.map((project) => (
+          <>
+            <span class="text-[#000000] font-bold uppercase font-glorich text-3xl">
+              {project.title}
+            </span>
+            <Diamond class="size-4 fill-[#000000]" />
+            <span class="text-[#000000] font-bold uppercase font-glorich text-3xl">
+              {project.title2}
+            </span>
+            <Diamond class="size-4 fill-[#000000]" />
+            <span class="text-[#000000] font-bold uppercase font-glorich text-3xl">
+              {project.title3}
+            </span>
+            <Diamond class="size-4 fill-[#000000]" />
+            <span class="text-[#000000] font-bold uppercase font-glorich text-3xl">
+              {project.title4}
+            </span>
+            <Diamond class="size-4 fill-[#000000]" />
+            <span class="text-[#000000] font-bold uppercase font-glorich text-3xl">
+              {project.title5}
+            </span>
+            <Diamond class="size-4 fill-[#000000]" />
+            <span class="text-[#000000] font-bold uppercase font-glorich text-3xl">
+              {project.title6}
+            </span>
+            <Diamond class="size-4 fill-[#000000]" />
+            <span class="text-[#000000] font-bold uppercase font-glorich text-3xl">
+              {project.title7}
+            </span>
+            <Diamond class="size-4 fill-[#000000]" />
+            <span class="text-[#000000] font-bold uppercase font-glorich text-3xl">
+              {project.title8}
+            </span>
+            <Diamond class="size-4 fill-[#000000]" />
+          </>
+        ))
+      }
+    </div>
+  </div>
+  <div
+    class="w-full overflow-x-hidden bg-[#7DCAD9] h-[90px] flex items-center justify-center md:-rotate-6 md:absolute"
+  >
+    <div class="banner-infinito flex items-center gap-4">
+      {
+        projects.map((project) => (
+          <>
+            <span class="text-[#B09FCD] font-bold uppercase font-glorich text-3xl">
+              {project.title9}
+            </span>
+            <Diamond class="size-4 fill-[#B09FCD]" />
+            <span class="text-[#B09FCD] font-bold uppercase font-glorich text-3xl">
+              {project.title10}
+            </span>
+            <Diamond class="size-4 fill-[#B09FCD]" />
+            <span class="text-[#B09FCD] font-bold uppercase font-glorich text-3xl">
+              {project.title11}
+            </span>
+            <Diamond class="size-4 fill-[#B09FCD]" />
+            <span class="text-[#B09FCD] font-bold uppercase font-glorich text-3xl">
+              {project.title12}
+            </span>
+            <Diamond class="size-4 fill-[#B09FCD]" />
+            <span class="text-[#B09FCD] font-bold uppercase font-glorich text-3xl">
+              {project.title13}
+            </span>
+            <Diamond class="size-4 fill-[#B09FCD]" />
+            <span class="text-[#B09FCD] font-bold uppercase font-glorich text-3xl">
+              {project.title14}
+            </span>
+            <Diamond class="size-4 fill-[#B09FCD]" />
+            <span class="text-[#B09FCD] font-bold uppercase font-glorich text-3xl">
+              {project.title15}
+            </span>
+            <Diamond class="size-4 fill-[#B09FCD]" />
+            <span class="text-[#B09FCD] font-bold uppercase font-glorich text-3xl">
+              {project.title16}
+            </span>
+            <Diamond class="size-4 fill-[#B09FCD]" />
+          </>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes desplazar {
+    from {
+      transform: translateX(50%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .banner-infinito {
+    display: inline-flex;
+    animation: desplazar 9s linear infinite;
+  }
+
+  .banner-infinito:hover {
+    animation-play-state: paused;
+  }
+</style>

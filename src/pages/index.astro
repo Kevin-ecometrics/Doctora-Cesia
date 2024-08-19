@@ -1,0 +1,61 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero.astro";
+import Banner from "@components/Banner.astro";
+import About from "@components/About.astro";
+import Values from "@components/Values";
+import Gallery from "@components/Gallery";
+import Services from "@components/Services.astro";
+import Testimonials from "@components/Testimonials";
+import Education from "@components/Education.astro";
+import Package from "@components/Package.astro";
+import Certification from "@components/Certification.astro";
+import ContactMe from "@components/ContactMe.astro";
+import Blog from "@components/Blog";
+import Question from "@components/Question";
+import Banner2 from "@components/Banner2.astro";
+
+let responsabilities = [
+  {
+    title: " Vanguardia médica",
+    subtitle:
+      "Manteniéndome constantemente actualizada en técnicas y procedimientos médicos.",
+    subtitle2:
+      "Mi enfoque se centra en una atención con perspectiva de género.",
+    subtitle3:
+      "Para respetar, proteger y dignificar la diversidad de cuerpos y contextos. ",
+  },
+  {
+    title: "Atención abierta y activa",
+    subtitle:
+      "Deseo proporcionarte las herramientas para que te sientas segurx en cada procedimiento.",
+    subtitle2: "Decide sobre tu cuerpo con total confianza y libertad.",
+    subtitle3: "Inicia un diálogo horizontal medico-paciente.",
+  },
+  {
+    title: "Empoderar y respetar",
+    subtitle: "Quiero ofrecerte acompañamiento adaptado a tus posibilidades.",
+    subtitle2:
+      "Buscando herramientas que respeten tu sistema de creencias y cultura.",
+    subtitle3:
+      "Siéntete escuchadx y respetadx en tus derechos sexuales y reproductivos.",
+  },
+];
+---
+
+<Layout title="Dra. Cesia Borjón  la mejor ginecóloga y obstetra feminista">
+  <Hero title="Ginecología y obstetricia feminista" />
+  <Banner />
+  <About />
+  <Values client:visible responsabilities={responsabilities} />
+  <Gallery client:visible />
+  <Services />
+  <Testimonials client:visible />
+  <Education />
+  <Banner2 />
+  <Package />
+  <!-- <Certification /> -->
+  <ContactMe />
+  <Blog client:visible />
+  <Question client:visible />
+</Layout>

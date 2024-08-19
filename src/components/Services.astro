@@ -1,0 +1,79 @@
+---
+import Service from "./Services";
+
+let servicios = [
+  {
+    title: "Check Up Ginecológico",
+    image:
+      "/Todo lo que debes saber del check up ginecologico con la Dra. Cesia.webp",
+    imageAlt:
+      "Acudir a tus check ups ginecologicos es importante para tu salud integral ",
+    imageInside:
+      "/Conoce la importancia del check up ginecologico con Cesia.webp",
+    insideAlt:
+      "Las revisiones periódicas nos ayudan a prevenir y detectar anomalías. ",
+    description:
+      "Las necesidades de salud de cada unx varia ampliamente y aquí estoy para ofrecer un enfoque personalizado y compasivo para que en cada etapa de tu vida en consulta ginecológica sea abordada desde tus necesidades y objetivos, por ejemplo: Podemos abordar revisiones de rutina, anticoncepción, y tratamiento de condiciones ginecológicas complejas. Durante el abordaje se llenará un consentimiento informado para tener un acercamiento respetuoso antes de aplicar alguna técnica.  ",
+  },
+  {
+    title: "Infecciones de ETS y tratamiento",
+    image: "/ETS.webp",
+    imageAlt: "",
+
+    imageInside: "/ETSportada.webp",
+    insideAlt: "",
+    description:
+      "Las infecciones de transmisión sexual son provocadas por bacterias, virus o parásitos y se pueden transmitir de una persona a otra a través de la sangre, el semen, los fluidos vaginales y otros líquidos corporales.  Estas infecciones pueden o no presentar síntomas, por lo que es crucial asistir a revisiones periódicas. Es bastante común contraer estas infecciones. Las ETS causadas por bacterias o parásitos pueden ser tratadas con medicamentos y antibióticos, mientras que las infecciones virales no tienen cura definitiva, pero el tratamiento puede ayudar a aliviar o eliminar los síntomas y a controlar la infección. ",
+  },
+  {
+    title: "VPH (Virus del Papiloma Humano)",
+    image: "/VPH.webp",
+    imageAlt: "",
+
+    imageInside: "/VPHportada.webp",
+    insideAlt: "",
+    description:
+      "Los virus del papiloma humano son más de 200 tipos. Algunos de estos virus pueden causar verrugas genitales, pero otros se asocian a patologías malignas como cáncer del cuello del útero, vagina, vulva y de tracto respiratorio superior.<br /><br /> Cerca del 80% de la población en algún punto de la vida tendrá la infección por el virus del papiloma humano, sin embargo, no en todas las personas presentan alguna padecimiento maligno debido a a que nuestro sistema inmunólogo es capaz de manejar la infección.<br /><br /> Para saber si tienes el virus del papiloma humano es necesario realizar una PCR que es un estudio que toma muestra de la secreción vaginal, cervical o por la uretra y nos dice que tipo de virus tenemos.<br /><br /> Recuerda que la mejor medicina es la preventiva, ya existe una vacuna contra el virus del papiloma humano que se llama Gardasil 9 que protege contra los virus más frecuentes y más malignos como lo son el 6, 11, 16, 18, 31, 33,45, 52, 58.<br /><br /> *La vacuna se recomienda para todas las personas a partir de los 11 años de edad*",
+  },
+  {
+    title: "Anticoncepción",
+    image: "/ANTI.webp",
+    imageAlt: "",
+
+    imageInside: "/ANTIportada.webp",
+    insideAlt: "",
+    description:
+      "La planeación y uso de tu método anticonceptivo será con base a tu salud, ya que existen determinadaspatologías o alteraciones que pueden determinar que métodos son más convenientes. Factores como: Estilo de vida y metas serán importantes para acompañarte en la elección más adecuada con la que te sientas con mayor comodidad.<br /><br /> Durante este proceso el objetivo es tu bienestar validando tus metas presentes y futuras brindándote guianza para que estés protegidx contra infecciones de transmisión sexual. En cuanto a los métodos anticonceptivos que podemos ofertarte existen los hormonales que vienen en distintas presentaciones y no hormonales como el DIU de cobre o plata.<br /><br /> Te recomiendo acudir a una consulta de evaluación para ver cuál es el ideal para ti",
+  },
+  {
+    title: "Aborto seguro y libre de estigmas",
+    image: "/ABORTO.webp",
+    imageAlt: "",
+
+    imageInside: "/ABORTOportada.webp",
+    insideAlt: "",
+    description:
+      "Tu Cuerpo, Tu Decisión, Tu Espacio” para que elijas libremente sobre tus derechos sexuales, reproductivOs y no reproductivos, sin estigmas. La maternidad debe ser una elección y no una imposición. Estamos aquí para acompañarte y orientarte con empatía, sobre todo con seguridad para el cuidado de tu salud y prosperidad. Recuerda, No estás solx en este proceso ",
+  },
+];
+---
+
+<main class="p-8 bg-white" id="servicios">
+  <section class="bg-[#B09FCD] p-4 rounded-3xl">
+    <h1
+      class="text-white text-4xl md:text-6xl font-glorich font-bold py-8 border-b border-white"
+    >
+      Servicios
+    </h1>
+    <Service services={servicios} client:visible />
+  </section>
+  <a href="/servicios/" class="flex justify-center items-center py-8">
+    <button
+      class="bg-[#FABB70] hover:bg-[#FABB70]
+      
+      text-black w-[261px] h-[58px] rounded-2xl font-bold"
+    >
+      Ver todos los servicios
+    </button>
+  </a>
+</main>

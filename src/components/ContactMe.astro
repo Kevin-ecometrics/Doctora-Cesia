@@ -1,0 +1,43 @@
+<main
+  class="h-[450px] flex justify-center items-center mt-8 mb-8 md:mt-0 md:mb-0 px-16 md:px-8"
+>
+  <div class="md:h-[351px] md:w-[1443px] bg-[#E2E479] rounded-3xl px-8">
+    <h1 class="text-xl md:text-2xl py-8 text-center font-binomaRegular">
+      Si estás <span id="dynamic-word" class="transition-opacity duration-1000"
+        >listo</span
+      > para programar una cita o tienes alguna pregunta.
+    </h1>
+    <h2
+      class="text-xl md:text-6xl font-semibold text-center mb-8 font-blisstwine uppercase"
+    >
+      ponte en contacto conmigo
+    </h2>
+
+    <div class="flex justify-center items-center md:mb-0 mb-8">
+      <a
+        href="/contacto/"
+        class="bg-[#FABB70] font-binomaRegular font-bold px-16 py-4 rounded-full uppercase
+           text-lg md:text-xl hover:scale-110"
+      >
+        Contáctame
+      </a>
+    </div>
+  </div>
+</main>
+
+<script>
+  const words = ["listo", "lista", "liste", "listx"];
+  let wordIndex = Math.floor(Math.random() * words.length); // Índice inicial aleatorio
+
+  function changeWord() {
+    const wordElement = document.getElementById("dynamic-word");
+    wordElement.style.opacity = "0"; // Inicia la transición de desvanecimiento
+    setTimeout(() => {
+      wordElement.textContent = words[wordIndex];
+      wordElement.style.opacity = "1"; // Inicia la transición de aparición
+      wordIndex = (wordIndex + 1) % words.length;
+    }, 1000); // Espera a que la transición de desvanecimiento termine
+  }
+
+  setInterval(changeWord, 3000); // Cambia la palabra cada 3 segundos
+</script>
