@@ -167,7 +167,8 @@ function Package({ packages }) {
             <img
               src={selectedPackage.image}
               className="w-full"
-              alt=""
+              alt={selectedPackage.alt}
+              title={selectedPackage.alt}
               loading="lazy"
             />
             <div className="flex items-center gap-4 md:py-4 mb-2 mt-2 md:mb-0 md:mt-2">
