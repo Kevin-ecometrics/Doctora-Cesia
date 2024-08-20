@@ -133,7 +133,7 @@ function Package({ packages }) {
       </div>
 
       {modalVisible && selectedPackage && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex z-50 justify-center  md:h-screen items-center w-full">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex z-50 justify-center items-center w-full">
           <div className="bg-white p-8 rounded-lg relative md:w-[820px]">
             <button
               className="absolute top-8 right-8 p-4 
@@ -166,11 +166,11 @@ function Package({ packages }) {
             </button>
             <img
               src={selectedPackage.image}
-              className="w-full h-32 md:h-80"
+              className="w-full"
               alt=""
               loading="lazy"
             />
-            <div className="flex items-center gap-4 md:py-4">
+            <div className="flex items-center gap-4 md:py-4 mb-2 mt-2 md:mb-0 md:mt-2">
               <div
                 className={`border h-24 w-5 ${selectedPackage.background}`}
               />
@@ -178,24 +178,23 @@ function Package({ packages }) {
                 Paquete <br /> {selectedPackage.name}
               </h2>
             </div>
-
             <div
-              className={` py-2 md:py-4 px-8 rounded-3xl font-binomaRegular font-bold text-xl flex text-black justify-start flex-col items-start ${selectedPackage.background}`}
+              className={`py-2 md:py-4 px-8 rounded-3xl font-binomaRegular font-bold text-xl flex text-black justify-start flex-col items-start ${selectedPackage.background} h-96 md:h-32 overflow-y-auto`}
             >
               <h1 className="text-start mb-4">
-                <strong className="font-binomaRegular ">Descripción:</strong>
+                <strong className="font-binomaRegular">Descripción:</strong>
                 &nbsp; <br />
                 <p className="text-black font-normal">
                   {selectedPackage.modalDescription}
                 </p>
               </h1>
-              <p class="text-start  border-t border-white w-full py-2">
+              <p className="text-start border-t border-white w-full py-2">
                 {selectedPackage.description1}
               </p>
-              <p class="text-start  border-t border-white w-full py-2">
+              <p className="text-start border-t border-white w-full py-2">
                 {selectedPackage.description2}
               </p>
-              <p class="text-start  border-t border-white w-full border-b py-2">
+              <p className="text-start border-t border-white w-full border-b py-2">
                 {selectedPackage.description3}
               </p>
             </div>

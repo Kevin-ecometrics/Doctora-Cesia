@@ -168,12 +168,14 @@ function Services({ services }) {
                     </h2>
                   </div>
                 </div>
-                <p
-                  className="font-binomaRegular font-normal md:text-2xl text-[#626262]"
-                  dangerouslySetInnerHTML={{
-                    __html: selectedService.description,
-                  }}
-                ></p>{" "}
+                <div className="max-h-40 overflow-y-auto">
+                  <p
+                    className="font-binomaRegular font-normal md:text-2xl text-[#626262]"
+                    dangerouslySetInnerHTML={{
+                      __html: selectedService.description,
+                    }}
+                  ></p>{" "}
+                </div>
               </div>
             </div>
           )}
@@ -259,12 +261,13 @@ function Services({ services }) {
                 loading="lazy"
                 className="w-full"
                 src={selectedService.imageInside}
-                alt=""
+                alt={selectedService.insideAlt}
+                title={selectedService.insideAlt}
               />
               <div className="flex gap-4 mb-4">
                 <div className={`border w-5 bg-[#B09FCD]`} />{" "}
                 <div className="flex flex-col">
-                  <h2 className="text-3xl md:text-6xl py-4 text-[#B09FCD] font-black font-glorich">
+                  <h2 className="text-2xl md:text-6xl py-4 text-[#B09FCD] font-black font-glorich">
                     {selectedService.title}
                   </h2>
                 </div>
