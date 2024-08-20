@@ -44,7 +44,7 @@ function Education({ education }) {
               openModal(index, ed.list);
             }}
           >
-            <img src={ed.image} loading="lazy" alt="" />
+            <img src={ed.image} loading="lazy" alt={ed.alt} title={ed.alt} />
           </div>
           <div className="text-black">
             <div className="mb-8">

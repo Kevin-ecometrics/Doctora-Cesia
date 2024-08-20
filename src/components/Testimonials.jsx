@@ -18,15 +18,22 @@ export default function App() {
     "Excelente médico, trato muy humano, explica detallada y claramente cualquier procedimiento que te haga, te aclara tus dudas, excelentes instalaciones, muy puntual, recomendadísima. ",
   ];
   const imagenSlides = [
-    "/testimonios.webp",
-    "/testimonios2.webp",
-    "/testimonios3.webp",
-    "/testimonios4.webp",
+    "/Testimoniales de pacientxs encantados con la atencion de la Dra Cesia Borjon en consulta.webp",
+    "/Testimoniales satisfechos con Atencion medica ginecologica feminista.webp",
+    "/Cada paciente se siente incluidx y recibe una atencion empatica con la Dra. Cesia.webp",
+    "/La Dra. Cesia brinda un trato calido hacia sus pacientes.webp",
+  ];
+
+  const imagenAlt = [
+    "Testimoniales de pacientes que estan encantados con su abordaje gineocologico con la ginecoobstetra Cesia Borjon  ",
+    "Paciente con testimonial de satisfacción con la atención medica feminista ",
+    "Testimoniales de pacientes que han recibido una atención empática e inclusiva con la Dra. Cesia ",
+    "La Dra. Cesia brinda un trato calido hacia sus pacientes Testimonial de paciente que recibio un Trato calido, y escucha activa por parte de la Dra. Cesia ",
   ];
 
   const autorSlides = [
     " Fernanda Armenta ",
-    "  Karen López ",
+    " Karen López ",
     " Maria Rubi Carillo Durazo ",
     " Carmen Sánchez ",
   ];
@@ -104,7 +111,12 @@ export default function App() {
             custom={direccion}
             transition={{ duration: 0.5 }}
           >
-            <img src={imagenSlides[indiceActual]} loading="lazy" alt="" />
+            <img
+              src={imagenSlides[indiceActual]}
+              loading="lazy"
+              alt={imagenAlt[indiceActual]}
+              title={imagenAlt[indiceActual]}
+            />
             <div className="flex flex-col">
               <p className="md:text-xl text-lg mb-8 font-semibold">
                 {textosSlides[indiceActual]}

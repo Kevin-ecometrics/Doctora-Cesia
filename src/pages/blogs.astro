@@ -3,21 +3,26 @@ import Layout from "@layouts/Layout.astro";
 import { fade } from "astro:transitions";
 
 const blogs = [
-  { src: "/Nacimiento Respetuoso.webp", href: "/blog/Acuerpar-el-nacimiento/" },
+  {
+    src: "/Nacimiento Respetuoso.webp",
+    href: "/blog/Acuerpar-el-nacimiento/",
+    title: "Acuerpar el nacimiento",
+  },
+
   {
     src: "/BlogAborto.webp",
-
     href: "/blog/La-esencialidad-y-libertad-que-implica-el-aborto-libre-de-estigma/",
+    title: "La esencialidad y libertad que implica el aborto libre de estigma",
   },
   {
     src: "/Retiro de verrugas por VPH.webp",
-
     href: "/blog/Que-hacer-si-te-han-detectado-el-virus-del-papiloma-humano/",
+    title: "¿Qué hacer si te han detectado el virus del papiloma humano?",
   },
 ];
 ---
 
-<Layout title="Blog">
+<Layout title="Blogs">
   <main
     transition:animate={fade({ duration: "1s" })}
     class="grid md:grid-cols-3 grid-cols-1 md:w-[80%] mx-auto"

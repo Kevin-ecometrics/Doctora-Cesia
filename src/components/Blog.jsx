@@ -2,20 +2,26 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const images = [
-  { src: "/Nacimiento Respetuoso.webp", href: "/blog/Acuerpar-el-nacimiento/" },
+  {
+    src: "/Nacimiento Respetuoso.webp",
+    href: "/blog/Acuerpar-el-nacimiento/",
+    title: "Acuerpar el nacimiento",
+  },
   {
     src: "/BlogAborto.webp",
     href: "/blog/La-esencialidad-y-libertad-que-implica-el-aborto-libre-de-estigma/",
+    title: "La esencialidad y libertad que implica el aborto libre de estigma",
   },
   {
     src: "/Retiro de verrugas por VPH.webp",
     href: "/blog/Que-hacer-si-te-han-detectado-el-virus-del-papiloma-humano/",
+    title: "¿Qué hacer si te han detectado el virus del papiloma humano?",
   },
 ];
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
-
+  const [isHover, setIsHover] = useState(false);
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
@@ -38,7 +44,7 @@ const Carousel = () => {
         <div className="bg-[#7DCAD9] h-[800px] p-8 flex justify-center items-center relative">
           <div className="flex justify-between items-center">
             <h1 className="absolute top-10 left-10 text-white z-10 text-[50px] font-glorich">
-              Mi Blog
+              BLOGS
             </h1>
             <a
               href="/blogs/"
@@ -67,7 +73,7 @@ const Carousel = () => {
               return (
                 <a
                   key={index}
-                  href={blog.href} // Aquí se agrega el href
+                  href={blog.href}
                   className={`absolute ${isCenter ? "z-20" : "z-10"} ${
                     isLeft ? "left-10" : ""
                   } ${isRight ? "right-10" : ""}`}
@@ -75,10 +81,10 @@ const Carousel = () => {
                     width: isCenter ? "400px" : "300px",
                     height: "auto",
                   }}
+                  onMouseEnter={() => setIsHover(true)}
+                  onMouseLeave={() => setIsHover(false)}
                 >
-                  <motion.img
-                    src={blog.src}
-                    alt=""
+                  <motion.div
                     initial={{
                       scale: isCenter ? 1.2 : 1,
                       opacity: isCenter ? 1 : 0.5,
@@ -88,8 +94,25 @@ const Carousel = () => {
                       opacity: isCenter ? 1 : 0.5,
                     }}
                     transition={{ duration: 0.5 }}
-                    className="w-full h-auto"
-                  />
+                    className="relative"
+                  >
+                    <img src={blog.src} alt="" className="w-full h-auto" />
+                    {isCenter && isHover && (
+                      <motion.div
+                        className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 h-auto text-white p-4"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <h3 className="text-xl font-bold mb-4">{blog.title}</h3>
+                        <a href={blog.href}>
+                          <button className="text-sm  bg-[#B09FCD] text-white py-2 px-4 rounded font-bold transition duration-300 ease-in-out transform hover:scale-105">
+                            Leer más
+                          </button>
+                        </a>
+                      </motion.div>
+                    )}
+                  </motion.div>
                 </a>
               );
             })}
@@ -104,7 +127,7 @@ const Carousel = () => {
       </section>
       <section className="block md:hidden bg-[#7DCAD9] p-4">
         <h1 className="text-white font-glorich font-bold text-4xl text-center mb-12 py-4">
-          MY BLOG
+          BLOGS
         </h1>
         <div className="relative ">
           <AnimatePresence mode="popLayout">
@@ -130,12 +153,15 @@ const Carousel = () => {
           </AnimatePresence>
         </div>
         <div className="flex justify-center items-center py-8 gap-2">
-          <a
-            href="/blog/blog1/"
-            className="text-white font-blisstwine font-normal text-xl"
-          >
-            Ver Tema
-          </a>
+          {images.length > currentIndex && (
+            <a
+              href={images[currentIndex].href}
+              className="text-white font-blisstwine font-normal text-xl"
+            >
+              Ver Tema
+            </a>
+          )}
+
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

@@ -51,8 +51,22 @@ let packages = [
   id="paquetes"
   class="flex justify-center items-center flex-col md:mt-32 mb-8"
 >
-  <h1 class="font-bold uppercase font-glorich text-3xl md:text-7xl py-8 mb-8">
-    Paquetes
-  </h1>
+  <div class="flex justify-between">
+    <img
+      src="/paquetePlanta.png"
+      class="hidden md:block"
+      alt="Llama al 664 976 3510 si tienes mas dudas"
+      title="Llama al 664 976 3510 si tienes mas dudas"
+    />
+    <h1 class="font-bold uppercase font-glorich text-3xl md:text-7xl py-8 mb-8">
+      Paquetes
+    </h1>
+    <img
+      src="/calendarioPlanta.png"
+      class="hidden md:block"
+      alt="Da clik a las preguntas mas frecuentes previo a tu consulta ginecologica "
+      title="Da clik a las preguntas mas frecuentes previo a tu consulta ginecologica "
+    />
+  </div>
   <Packages client:visible packages={packages} />
 </main>
