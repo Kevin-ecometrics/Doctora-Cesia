@@ -9,7 +9,7 @@ function Nav({ URL }) {
   };
 
   return (
-    <nav className="0 w-full z-50 flex items-center justify-between bg-white text-black p-4 md:h-[124px] border   border-gray-400 shadow-xl">
+    <nav className=" w-full z-50 flex items-center md:justify-between bg-white text-black p-4 md:h-[124px] border border-gray-400 shadow-xl">
       <div className="flex items-center">
         <a href="/">
           <motion.img
@@ -22,6 +22,15 @@ function Nav({ URL }) {
           />
         </a>
       </div>
+      <div className="md:hidden block px-8 ">
+        <a
+          href={URL === "/agenda/" ? "/contacto/" : "/agenda/"}
+          className="cursor-pointer bg-white mt-4 text-black font-semibold md:text-xl border border-black px-2 py-2 rounded-full font-blisstwine"
+        >
+          {URL === "/agenda/" ? "Contactarme" : "Agendar"}
+        </a>
+      </div>
+
       {URL === "/" ? (
         <ul className="flex items-center justify-center space-x-16 font-semibold text-xl">
           {/* <motion.a
@@ -148,6 +157,7 @@ function Nav({ URL }) {
             <div className="flex justify-start items-start">
               <img src="/NavMobile.png" alt="" />
             </div>
+
             <button
               onClick={toggleMenu}
               className="self-end p-4 focus:outline-none absolute"
