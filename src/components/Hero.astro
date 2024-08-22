@@ -46,18 +46,28 @@ const { title } = Astro.props;
       class="absolute bottom-[-30px] md:right-10 md:bottom-0 flex flex-row md:flex-col gap-4"
     >
       <a
+        aria-label="Icono redsocial Instagram"
         target="_blank"
         href="https://www.instagram.com/dracesiaborjonginecologa/"
       >
         <Instagram class="cursor-pointer" />
       </a>
-      <a target="_blank" href="https://www.facebook.com/ginecologahermosillo/">
+      <a
+        aria-label="Icono redsocial Facebook"
+        target="_blank"
+        href="https://www.facebook.com/ginecologahermosillo/"
+      >
         <Facebook class="cursor-pointer" />
       </a>
-      <a target="_blank" href="https://www.tiktok.com/@ginecesiaborjon">
+      <a
+        aria-label="Icono redsocial Tiktok"
+        target="_blank"
+        href="https://www.tiktok.com/@ginecesiaborjon"
+      >
         <Tiktok class="cursor-pointer" />
       </a>
       <a
+        aria-label="Icono redsocial Thread"
         target="_blank"
         href="https://www.threads.net/@dracesiaborjonginecologa?xmt=AQGzDYoTSWZoqF1UnIXONVmb_6WfKrrWDU9QEumtdr-rddY"
       >
@@ -65,8 +75,8 @@ const { title } = Astro.props;
       </a>
     </div>
   </div>
-  <div class="absolute left-10 bottom-[-180px] hidden md:block">
-    <a href="#about">
+  <div class="absolute left-10 bottom-[-120px] hidden md:block">
+    <a aria-label="Ir a la sección sobre nosotros" href="#about">
       <svg
         width="80"
         height="80"

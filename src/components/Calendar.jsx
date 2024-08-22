@@ -188,14 +188,16 @@ const App = () => {
   return (
     <main className="">
       <img
-        src="/agendaFondo.png"
+        src="/Agenda tu cita con la mejor ginecoobstetra en Tijuana.png"
         className="absolute h-[800px] hidden md:block"
-        alt=""
+        alt="Agenda hoy tu cita con la mejor ginecoobstetra en Tijuana  "
+        title="Agenda hoy tu cita con la mejor ginecoobstetra en Tijuana  "
       />
       <img
-        src="/calendarioPlanta.png"
+        src="/Obstetricia vanguardista cerca de ti.png"
         className="absolute left-56 translate-y-[-13px]  hidden md:block"
-        alt=""
+        alt="La vanguardia de la Dra Cesia Borjón muy cerca de ti  "
+        title="La vanguardia de la Dra Cesia Borjón muy cerca de ti  "
       />
 
       <h1 className="p-8 px-16 text-5xl font-glorich font-medium z-10 relative">
@@ -203,7 +205,12 @@ const App = () => {
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 px-8 gap-16 py-8">
         <div className="">
-          <img className="" src="/calendar.png" alt="" />
+          <img
+            className=""
+            src="/Cesia borjon tu ginecoobstetra con perspectiva de genero.png"
+            alt="Atencion con perspectiva de genero con la Dra. Cesia "
+            title="Atencion con perspectiva de genero con la Dra. Cesia "
+          />
         </div>
         <div className="flex gap-8">
           <div className="flex flex-col">

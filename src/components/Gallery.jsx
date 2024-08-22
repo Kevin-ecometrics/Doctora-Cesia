@@ -65,9 +65,10 @@ const Gallery = () => {
                 CONSULTORIO
               </h2>
               <img
-                src="/galleryPlanta.png"
+                src="/Obstetricia vanguardista cerca de ti.png"
                 className="translate-x-[-30px]"
-                alt=""
+                alt="La vanguardia de la Dra Cesia Borjón muy cerca de ti  "
+                title="La vanguardia de la Dra Cesia Borjón muy cerca de ti  "
               />
             </div>
           </div>
@@ -367,7 +368,8 @@ const Gallery = () => {
               </div>
               <img
                 src={tratamiento.imagen}
-                alt={tratamiento.nombre}
+                alt={tratamiento.alt}
+                title={tratamiento.alt}
                 loading="lazy"
                 className="w-full h-48 object-cover cursor-pointer"
                 OnClick={() => openModal(tratamiento.imagen)}

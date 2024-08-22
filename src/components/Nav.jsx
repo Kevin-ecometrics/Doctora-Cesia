@@ -33,41 +33,45 @@ function Nav({ URL }) {
 
       {URL === "/" ? (
         <ul className="flex items-center justify-center space-x-16 font-semibold text-xl">
-          {/* <motion.a
-            href="/"
-            whileHover={{ scale: 1.1 }}
-            className="cursor-pointer hidden md:block hover:text-[#B09FCD]"
-          >
-            Home
-          </motion.a> */}
-          <motion.a
-            href="#galeria"
-            whileHover={{ scale: 1.1 }}
-            className="cursor-pointer hidden md:block hover:text-[#B09FCD]"
-          >
-            Galería
-          </motion.a>
-          <motion.a
-            href="#servicios"
-            whileHover={{ scale: 1.1 }}
-            className="cursor-pointer hidden md:block hover:text-[#B09FCD]"
-          >
-            Servicios
-          </motion.a>
-          <motion.a
-            href="#paquetes"
-            whileHover={{ scale: 1.1 }}
-            className="cursor-pointer hidden md:block hover:text-[#B09FCD]"
-          >
-            Paquetes
-          </motion.a>
-          <motion.a
-            href="#blog"
-            whileHover={{ scale: 1.1 }}
-            className="cursor-pointer hidden md:block hover:text-[#B09FCD]"
-          >
-            Blog
-          </motion.a>
+          <li>
+            <motion.a
+              href="#galeria"
+              whileHover={{ scale: 1.1 }}
+              className="cursor-pointer hidden md:block hover:text-[#B09FCD]"
+            >
+              Galería
+            </motion.a>
+          </li>
+
+          <li>
+            <motion.a
+              href="#servicios"
+              whileHover={{ scale: 1.1 }}
+              className="cursor-pointer hidden md:block hover:text-[#B09FCD]"
+            >
+              Servicios
+            </motion.a>
+          </li>
+
+          <li>
+            <motion.a
+              href="#paquetes"
+              whileHover={{ scale: 1.1 }}
+              className="cursor-pointer hidden md:block hover:text-[#B09FCD]"
+            >
+              Paquetes
+            </motion.a>
+          </li>
+
+          <li>
+            <motion.a
+              href="#blog"
+              whileHover={{ scale: 1.1 }}
+              className="cursor-pointer hidden md:block hover:text-[#B09FCD]"
+            >
+              Blog
+            </motion.a>
+          </li>
         </ul>
       ) : (
         <ul></ul>

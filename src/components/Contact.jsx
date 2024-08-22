@@ -182,10 +182,26 @@ function Contact() {
                   Métodos de pago:
                 </h1>
                 <div className="flex gap-4">
-                  <img src="/MasterCard.png" alt="" />
-                  <img src="/Visa.png" alt="" />
-                  <img src="/AmericanExpress.png" alt="" />
-                  <img src="/Efectivo.png" alt="" />
+                  <img
+                    src="/Aceptamos pagos con tarjeta.png"
+                    alt="En el consultorio aceptamos pagos con tarjeta  "
+                    title="En el consultorio aceptamos pagos con tarjeta  "
+                  />
+                  <img
+                    src="/Aceptamos pagos con tarjeta de debito o credito.png"
+                    alt="Puedes pagar tu consulta ginecológica con tu tarjeta de débito o crédito "
+                    title="Puedes pagar tu consulta ginecológica con tu tarjeta de débito o crédito "
+                  />
+                  <img
+                    src="/Aceptamos pagos con tarjeta de credito.png"
+                    alt="Aceptamos pagos con tarjeta de crédito en el consultorio "
+                    title="Aceptamos pagos con tarjeta de crédito en el consultorio "
+                  />
+                  <img
+                    src="/Aceptamos pagos en efectivo y trasferencias bancarias.png"
+                    alt="Con la Dra. Cesia aceptamos pagos en efectivo y trasferencias bancarias "
+                    title="Con la Dra. Cesia aceptamos pagos en efectivo y trasferencias bancarias "
+                  />
                   <p className="font-binomaRegular text-xl font-bold">
                     Efectivo o Transferencia
                   </p>

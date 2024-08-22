@@ -74,6 +74,7 @@ export default function App() {
         <button
           onClick={anteriorSlide}
           className=" text-white font-bold py-2 px-4 rounded hidden md:block"
+          aria-label="Anterior Testimonial"
         >
           <svg
             width="75"
@@ -130,6 +131,7 @@ export default function App() {
         </AnimatePresence>
         <button
           onClick={siguienteSlide}
+          aria-activedescendant="Siguiente Testimonial"
           className=" text-white font-bold py-2 px-4 rounded hidden md:block"
         >
           <svg

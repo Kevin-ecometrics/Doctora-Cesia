@@ -3,19 +3,22 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const images = [
   {
-    src: "/Nacimiento Respetuoso.webp",
+    src: "/Nacimiento respetado asistido por la Dra. Cesia Borjon.webp",
     href: "/blog/Acuerpar-el-nacimiento/",
     title: "Acuerpar el nacimiento",
+    alt: "Nacimiento respetado asistido por la Dra. Ginecoobstetra Cesia Borjón  ",
   },
   {
-    src: "/BlogAborto.webp",
+    src: "/Aborto libre de estigma en tu consultorio ginecologico.webp",
     href: "/blog/La-esencialidad-y-libertad-que-implica-el-aborto-libre-de-estigma/",
     title: "La esencialidad y libertad que implica el aborto libre de estigma",
+    alt: "Consultorio ginecologico violeta y aborto libre de estigma ",
   },
   {
-    src: "/Retiro de verrugas por VPH.webp",
+    src: "/Deteccion y tratamiento del VPH en tu consultorio ginecologico.webp",
     href: "/blog/Que-hacer-si-te-han-detectado-el-virus-del-papiloma-humano/",
     title: "¿Qué hacer si te han detectado el virus del papiloma humano?",
+    alt: "Deteccion y tratamiento del Virus del Papiloma Humano en tu consultorio ginecologico con la Dra. Cesia",
   },
 ];
 
@@ -96,7 +99,12 @@ const Carousel = () => {
                     transition={{ duration: 0.5 }}
                     className="relative"
                   >
-                    <img src={blog.src} alt="" className="w-full h-auto" />
+                    <img
+                      src={blog.src}
+                      alt={blog.alt}
+                      title={blog.title}
+                      className="w-full h-auto"
+                    />
                     {isCenter && isHover && (
                       <motion.div
                         className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 h-auto text-white p-4"
@@ -144,7 +152,8 @@ const Carousel = () => {
                   >
                     <img
                       src={blog.src}
-                      alt=""
+                      alt={blog.alt}
+                      title={blog.title}
                       className="w-full h-auto rounded-lg mb-8"
                     />
                   </motion.div>

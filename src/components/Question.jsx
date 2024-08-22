@@ -37,19 +37,22 @@ const Question = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="col-span-1 flex justify-center items-center flex-col">
           <img
-            src="/plantaAsk.png"
+            src="/Conoce las preguntas frecuentes antes de tu visita ginecologica con la Dra. Cesia.png"
             className="absolute left-4 translate-y-[-220px] hidden md:block "
-            alt=""
+            alt="Te invitamos a Conocer las preguntas frecuentes antes de tu visita ginecológica con la Dra. Cesia "
+            title="Te invitamos a Conocer las preguntas frecuentes antes de tu visita ginecológica con la Dra. Cesia "
           />
           <img
-            src="/plantaAsk2.png"
-            className="absolute hidden md:block translate-x-36 translate-y-[-80px]"
-            alt=""
+            src="/Conoce mas en preguntas frecuentes.png"
+            className="absolute hidden md:block translate-x-36 translate-y-[-100px]"
+            alt="Da clik a las preguntas mas frecuentes previo a tu consulta ginecologica "
+            title="Da clik a las preguntas mas frecuentes previo a tu consulta ginecologica "
           />
           <img
-            src="/plantaAsk3.png"
+            src="/Si tienes mas dudas  puedes dar llamar directamente.png"
             className="absolute hidden md:block translate-y-24 translate-x-[-220px]"
-            alt=""
+            alt="Llama al 664 976 3510 si tienes mas dudas  "
+            title="Llama al 664 976 3510 si tienes mas dudas  "
           />
           <h1 className="text-3xl md:text-6xl font-glorich font-bold">
             PREGUNTAS FRECUENTES

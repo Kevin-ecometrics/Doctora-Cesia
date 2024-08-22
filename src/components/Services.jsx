@@ -114,7 +114,6 @@ function Services({ services }) {
                 <img
                   loading="lazy"
                   src={modalImage}
-                  alt="Expanded service"
                   className="max-w-full max-h-full"
                 />
               </div>
