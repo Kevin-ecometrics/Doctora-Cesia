@@ -62,6 +62,9 @@ function Education({ education }) {
               <h1 className="text-2xl md:text-4xl mb-4 font-blisstwine">
                 {ed.title}
               </h1>
+              <p className="text-lg md:text-2xl font-binomaRegular">
+                {ed.subtitle}
+              </p>
               <p className="text-xl font-medium font-binomaRegular">
                 {/* {ed.description} */}
               </p>
