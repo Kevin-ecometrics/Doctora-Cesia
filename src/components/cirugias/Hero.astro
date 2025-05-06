@@ -1,66 +1,134 @@
 ---
-import {
-  FaFacebook,
-  FaFacebookF,
-  FaInstagram,
-  FaThreads,
-  FaTiktok,
-} from "react-icons/fa6";
-import "./Scroll.css";
+import { FaFacebook, FaInstagram, FaThreads, FaTiktok } from "react-icons/fa6";
+
 interface Props {
   title: string;
   description: string;
   blogtext: string;
 }
+
 const { title, description, blogtext } = Astro.props;
+
+const socialLinks = [
+  {
+    platform: "Instagram",
+    url: "https://www.instagram.com/dracesiaborjonginecologa/",
+    icon: FaInstagram,
+    color: "text-pink-500 hover:text-pink-700",
+  },
+  {
+    platform: "Facebook",
+    url: "https://www.facebook.com/ginecologahermosillo/",
+    icon: FaFacebook,
+    color: "text-blue-500 hover:text-blue-700",
+  },
+  {
+    platform: "TikTok",
+    url: "https://www.tiktok.com/@ginecesiaborjon",
+    icon: FaTiktok,
+    color: "text-gray-800 hover:text-gray-900",
+  },
+  {
+    platform: "Threads",
+    url: "https://www.threads.com/@dracesiaborjonginecologa",
+    icon: FaThreads,
+    color: "text-gray-500 hover:text-gray-700",
+  },
+];
 ---
 
-<main class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 mx-auto container">
-  <div class="col-span-2 relative">
-    <h1 class="font-blisstwine text-[66px]">
-      {title}
-    </h1>
-    <p class="text-[18px] font-binomaRegular mb-8">
-      {description}
-    </p>
-    <div class="absolute bottom-0">
-      <span class="text-gray-500 text-2xl">
-        Síguenos en nuestras redes sociales:
-      </span>
-      <div class="flex gap-4 mt-4 mb-8">
-        <a
-          href="https://www.instagram.com/dracesiaborjonginecologa/"
-          target="_blank"
-          class="text-pink-500 hover:text-pink-700 text-4xl"
-        >
-          <FaInstagram />
-        </a>
-        <a
-          href="https://www.facebook.com/ginecologahermosillo/"
-          target="_blank"
-          class="text-blue-500 hover:text-blue-700 text-4xl"
-        >
-          <FaFacebook />
-        </a>
-        <a
-          href="https://www.tiktok.com/@ginecesiaborjon"
-          target="_blank"
-          class="text-black hover:text-gray-700 text-4xl"
-        >
-          <FaTiktok />
-        </a>
-        <a
-          href="https://www.threads.com/@dracesiaborjonginecologa?xmt=AQGzDYoTSWZoqF1UnIXONVmb_6WfKrrWDU9QEumtdr-rddY"
-          target="_blank"
-          class="text-gray-500 hover:text-gray-700 text-4xl"
-        >
-          <FaThreads />
-        </a>
+<main class="container mx-auto md:py-12">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+    {/* Content section */}
+    <div class="md:col-span-2 flex flex-col">
+      <h1
+        class="font-serif text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight text-gray-900 mb-6"
+      >
+        {title}
+      </h1>
+
+      <p class="text-lg md:text-xl text-gray-600 mb-8 md:mb-12 leading-relaxed">
+        {description}
+      </p>
+
+      <div class="mt-auto pt-6 border-t border-gray-200">
+        <span class="block text-gray-500 text-lg md:text-xl mb-4">
+          Síguenos en nuestras redes:
+        </span>
+
+        <div class="flex flex-wrap gap-3">
+          {
+            socialLinks.map(({ platform, url, icon: Icon, color }) => (
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class={`p-3 rounded-full transition-all duration-300 ${color} hover:scale-110`}
+                aria-label={`${platform} de Dra. Cesia Borjón`}
+              >
+                <Icon className="text-2xl" />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+    {/* Blog section with left scrollbar */}
+    <div class="relative">
+      <div
+        class="h-full max-h-[600px] pl-4 pr-2 overflow-y-auto
+               direction-rtl text-left scrollbar-left"
+        set:html={blogtext}
+      />
+
+      {/* Gradient overlay */}
+      <div
+        class="pointer-events-none absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-white to-transparent"
+      >
       </div>
     </div>
   </div>
-  <div
-    class="overflow-y-auto text-balance max-h-[600px] pl-4 scrollbar-left"
-    set:html={blogtext}
-  />
 </main>
+
+<style is:global>
+  /* Left-aligned scrollbar styles */
+  .scrollbar-left {
+    scrollbar-width: thin;
+    scrollbar-color: #b09fcd transparent;
+    direction: rtl; /* Right-to-left for scrollbar positioning */
+  }
+
+  .scrollbar-left > * {
+    direction: ltr; /* Reset text direction for content */
+  }
+
+  .scrollbar-left::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-left::-webkit-scrollbar-thumb {
+    background-color: #b09fcd;
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+    transition: background-color 0.3s ease;
+  }
+
+  .scrollbar-left::-webkit-scrollbar-thumb:hover {
+    background-color: #9b88c6;
+  }
+
+  .scrollbar-left::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 8px 0;
+  }
+
+  /* Minimal scrollbar indicator when not hovering */
+  .scrollbar-left:not(:hover)::-webkit-scrollbar-thumb {
+    background-color: #b09fcd;
+    opacity: 0.5;
+    width: 3px;
+  }
+</style>

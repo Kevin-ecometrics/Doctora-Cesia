@@ -1,3 +1,7 @@
+---
+import Button from "@components/cirugias/Button";
+---
+
 <main
   class="h-[450px] flex justify-center items-center mt-8 mb-8 md:mt-0 md:mb-0 px-16 md:px-8"
 >
@@ -13,15 +17,7 @@
       ponte en contacto conmigo
     </h2>
 
-    <div class="flex justify-center items-center md:mb-0 mb-8">
-      <a
-        href="/contacto/"
-        class="bg-[#FABB70] font-binomaRegular font-bold px-16 py-4 rounded-full uppercase
-                     text-lg md:text-xl hover:scale-110 transition-transform duration-500 ease-in-out hover:bg-[#F9A850]"
-      >
-        Contáctame
-      </a>
-    </div>
+    <Button client:visible />
   </div>
 </main>
 
