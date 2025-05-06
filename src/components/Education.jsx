@@ -11,6 +11,7 @@ function Education({ education }) {
     setSelectedList(list);
     setCurrentImageIndex(0); // Resetear al primer índice de imagen
     setModalOpen(true);
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
@@ -18,6 +19,7 @@ function Education({ education }) {
     setSelectedIndex(null);
     setSelectedList([]);
     setCurrentImageIndex(0);
+    document.body.style.overflow = "";
   };
 
   const showNextImage = () => {

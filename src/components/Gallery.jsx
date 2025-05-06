@@ -45,11 +45,13 @@ const Gallery = () => {
   const openModal = (imagen) => {
     setSelectedImage(imagen);
     setModalOpen(true);
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setModalOpen(false);
     setSelectedImage(null);
+    document.body.style.overflow = "";
   };
 
   return (

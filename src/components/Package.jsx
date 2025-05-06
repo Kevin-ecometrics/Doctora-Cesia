@@ -8,11 +8,13 @@ function Package({ packages }) {
   const handleSvgClick = (item) => {
     setSelectedPackage(item);
     setModalVisible(true);
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setModalVisible(false);
     setSelectedPackage(null);
+    document.body.style.overflow = "";
   };
 
   return (

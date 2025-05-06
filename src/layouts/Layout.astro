@@ -5,6 +5,10 @@ import Thread from "@components/assets/icons/thread.astro";
 import Tiktok from "@components/assets/icons/tiktok.astro";
 import Nav from "@components/Nav";
 import { ViewTransitions } from "astro:transitions";
+import { FaThreads } from "react-icons/fa6";
+import { FaTiktok } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa6";
 
 interface Props {
   title: string;
@@ -106,7 +110,7 @@ let LINK = Astro.url.pathname;
       fbq("track", "PageView");
     </script>
   </head>
-  <body>
+  <body class="overflow-x-hidden">
     <noscript
       ><iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-WR3MVSWK"
@@ -124,196 +128,146 @@ let LINK = Astro.url.pathname;
     >
     <Nav URL={LINK} client:load />
     <slot />
-  </body><footer
-    class="md:h-[550px] bg-[#B09FCD] text-white px-8 py-16 md:w-[100%] mx-auto"
-  >
-    <img
-      src="/Ginecologa feminista certificada en Tijuana.png"
-      class="absolute left-0 z-0"
-      title="Acude a consulta ginecologica feminista certificada en Tijuana "
-      alt="Acude a consulta ginecologica feminista certificada en Tijuana "
-    />
-    <img
-      src="/Ginecologa feminista certificada en Tijuana.png"
-      class="absolute right-0 z-0 rotate-180"
-      alt="Acude a consulta ginecologica feminista certificada en Tijuana "
-      title="Acude a consulta ginecologica feminista certificada en Tijuana "
-    />
+  </body>{
+    (
+      <footer class="md:h-[550px] bg-[#B09FCD] text-white px-8 py-16 md:w-[100%] mx-auto">
+        <img
+          src="/Ginecologa feminista certificada en Tijuana.png"
+          class="absolute left-0 z-0"
+          title="Acude a consulta ginecologica feminista certificada en Tijuana "
+          alt="Acude a consulta ginecologica feminista certificada en Tijuana "
+        />
+        <img
+          src="/Ginecologa feminista certificada en Tijuana.png"
+          class="absolute right-0 z-0 rotate-180"
+          alt="Acude a consulta ginecologica feminista certificada en Tijuana "
+          title="Acude a consulta ginecologica feminista certificada en Tijuana "
+        />
 
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 z-10 relative"
-    >
-      <div class="text-start">
-        <h1 class="text-[30px] font-bold mb-8">UBICACIÓN</h1>
-        <iframe
-          title="Ubicación de la clínica de la Dra. Cesia Borjón"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d594.6340972315487!2d-117.01575147650581!3d32.53259852457227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d94958944d9c67%3A0x1d12fba54673ee22!2sTorre%20Norte%202!5e0!3m2!1ses!2smx!4v1722620687129!5m2!1ses!2smx"
-          allowfullscreen=""
-          class="w-full h-[300px] md:h-[300px]"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <div>
-        <h1 class="text-[30px] font-bold mb-8">LOCALÍZAME</h1>
-        <p class="mb-8">Torre Norte No. 2, Piso 2, Local: 809 y 810.</p>
-        <p class="mb-8">Calle: Fray Servando Teresa de Mier, #1351.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 z-10 relative">
+          <div class="text-start">
+            <h1 class="text-[30px] font-bold mb-8">UBICACIÓN</h1>
+            <iframe
+              title="Ubicación de la clínica de la Dra. Cesia Borjón"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d594.6340972315487!2d-117.01575147650581!3d32.53259852457227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d94958944d9c67%3A0x1d12fba54673ee22!2sTorre%20Norte%202!5e0!3m2!1ses!2smx!4v1722620687129!5m2!1ses!2smx"
+              allowfullscreen=""
+              class="w-full h-[300px] md:h-[300px]"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            />
+          </div>
+          <div>
+            <h1 class="text-[30px] font-bold mb-8">LOCALÍZAME</h1>
+            <p class="mb-8">Torre Norte No. 2, Piso 2, Local: 809 y 810.</p>
+            <p class="mb-8">Calle: Fray Servando Teresa de Mier, #1351.</p>
 
-        <p class="mb-8">Zona Urbana Río Tijuana, C.P. 22010</p>
-        <p class="mb-8">Tijuana, Baja California, México.</p>
-      </div>
+            <p class="mb-8">Zona Urbana Río Tijuana, C.P. 22010</p>
+            <p class="mb-8">Tijuana, Baja California, México.</p>
+          </div>
 
-      <div>
-        <h1 class="text-[30px] font-bold mb-8">CONTÁCTAME</h1>
-        <p class="mb-6">Doctora Cesia Borjón</p>
+          <div>
+            <h1 class="text-[30px] font-bold mb-8">CONTÁCTAME</h1>
+            <p class="mb-6">Doctora Cesia Borjón</p>
 
-        <p class="mb-6">
-          <a href="mailto:doctora@cesiaborjon.com" class="hover:underline"
-            >doctora@cesiaborjon.com</a
-          >
-        </p>
+            <p class="mb-6">
+              <a href="mailto:doctora@cesiaborjon.com" class="hover:underline">
+                doctora@cesiaborjon.com
+              </a>
+            </p>
 
-        <p class="mb-6">
-          <a href="tel:6649763510" class="hover:underline">664 976 3510</a>
-        </p>
-        <p class="mb-8">
-          <a href="/" class="mb-6 hover:underline">cesiaborjon.com</a>
-        </p>
+            <p class="mb-6">
+              <a href="tel:6649763510" class="hover:underline">
+                664 976 3510
+              </a>
+            </p>
+            <p class="mb-8">
+              <a href="/" class="mb-6 hover:underline">
+                cesiaborjon.com
+              </a>
+            </p>
 
-        <a
-          href="/contacto/"
-          class="bg-[#FABB70] font-binomaBold font-bold rounded-full text-black px-8 py-4"
-        >
-          ¡CONTÁCTAME!
-        </a>
-      </div>
+            <a
+              href="/contacto/"
+              class="bg-[#FABB70] font-binomaBold font-bold rounded-full text-black px-8 py-4"
+            >
+              ¡CONTÁCTAME!
+            </a>
+          </div>
 
-      <div class="hidden md:block">
-        <h1 class="text-[30px] font-bold mb-8">SÍGUEME</h1>
-        <div class="flex gap-4">
-          <a
-            target="_blank"
-            href="https://www.instagram.com/dracesiaborjonginecologa/"
-          >
-            <Instagram class="cursor-pointer fill-white" />
-          </a>
-          <a
-            target="_blank"
-            href="https://www.facebook.com/ginecologahermosillo/"
-          >
-            <Facebook class="cursor-pointer fill-white" />
-          </a>
-          <a target="_blank" href="https://www.tiktok.com/@ginecesiaborjon">
-            <Tiktok class="cursor-pointer fill-white" />
-          </a>
-          <a
-            target="_blank"
-            href="https://www.threads.net/@dracesiaborjonginecologa?xmt=AQGzDYoTSWZoqF1UnIXONVmb_6WfKrrWDU9QEumtdr-rddY"
-          >
-            <Thread class="cursor-pointer fill-white" />
-          </a>
+          <div class="hidden md:block">
+            <h1 class="text-[30px] font-bold mb-8">SÍGUEME</h1>
+            <div class="flex gap-4">
+              <a
+                target="_blank"
+                href="https://www.instagram.com/dracesiaborjonginecologa/"
+              >
+                <Instagram class="cursor-pointer fill-white" />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.facebook.com/ginecologahermosillo/"
+              >
+                <Facebook class="cursor-pointer fill-white" />
+              </a>
+              <a target="_blank" href="https://www.tiktok.com/@ginecesiaborjon">
+                <Tiktok class="cursor-pointer fill-white" />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.threads.net/@dracesiaborjonginecologa?xmt=AQGzDYoTSWZoqF1UnIXONVmb_6WfKrrWDU9QEumtdr-rddY"
+              >
+                <Thread class="cursor-pointer fill-white" />
+              </a>
+            </div>
+            <p class="mb-6 mt-6">
+              Registro Profesional Estatal Médico Cirujano y Partero
+              031572-02/24
+            </p>
+            <p class="mb-6">
+              Registro Profesional Estatal Especialidad en Ginecología y
+              Obstetricia 031573-02/24
+            </p>
+            <p>Aviso COFEPRIS 2302022002A00068</p>
+          </div>
+          <div class="block md:hidden">
+            <h1 class="text-[30px] font-bold mb-8">SÍGUEME</h1>
+            <div class="flex gap-4">
+              <a
+                target="_blank"
+                href="https://www.instagram.com/dracesiaborjonginecologa/"
+              >
+                <FaInstagram className="text-5xl text-black bg-white rounded-full border-[3px] p-2 border-black" />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.facebook.com/ginecologahermosillo/"
+              >
+                <FaFacebookF className="text-5xl text-black bg-white rounded-full border-[3px] p-2 border-black" />
+              </a>
+              <a target="_blank" href="https://www.tiktok.com/@draborjongine">
+                <FaTiktok className="text-5xl text-black bg-white rounded-full border-[3px] p-2 border-black" />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.threads.net/@dracesiaborjonginecologa?xmt=AQGzDYoTSWZoqF1UnIXONVmb_6WfKrrWDU9QEumtdr-rddY"
+              >
+                <FaThreads className="text-5xl text-black bg-white rounded-full border-[3px] p-2 border-black" />
+              </a>
+            </div>
+            <p class="mb-6 mt-6">
+              Registro Profesional Estatal Médico Cirujano y Partero
+              031572-02/24
+            </p>
+            <p class="mb-6">
+              Registro Profesional Estatal Especialidad en Ginecología y
+              Obstetricia 031573-02/24
+            </p>
+            <p>Aviso COFEPRIS 2302022002A00068</p>
+          </div>
         </div>
-        <p class="mb-6 mt-6">
-          Registro Profesional Estatal Médico Cirujano y Partero 031572-02/24
-        </p>
-        <p class="mb-6">
-          Registro Profesional Estatal Especialidad en Ginecología y Obstetricia
-          031573-02/24
-        </p>
-        <p>Aviso COFEPRIS 2302022002A00068</p>
-      </div>
-      <div class="block md:hidden">
-        <h1 class="text-[30px] font-bold mb-8">SÍGUEME</h1>
-        <div class="flex gap-4">
-          <a
-            target="_blank"
-            href="https://www.instagram.com/dracesiaborjonginecologa/"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
-              ></path><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"
-              ></path><path d="M16.5 7.5l0 .01"></path></svg
-            >
-          </a>
-          <a
-            target="_blank"
-            href="https://www.facebook.com/ginecologahermosillo/"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
-              ></path></svg
-            >
-          </a>
-          <a target="_blank" href="https://www.tiktok.com/@draborjongine">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tiktok"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z"
-              ></path></svg
-            >
-          </a>
-          <a
-            target="_blank"
-            href="https://www.threads.net/@dracesiaborjonginecologa?xmt=AQGzDYoTSWZoqF1UnIXONVmb_6WfKrrWDU9QEumtdr-rddY"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-brand-threads"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M19 7.5c-1.333 -3 -3.667 -4.5 -7 -4.5c-5 0 -8 2.5 -8 9s3.5 9 8 9s7 -3 7 -5s-1 -5 -7 -5c-2.5 0 -3 1.25 -3 2.5c0 1.5 1 2.5 2.5 2.5c2.5 0 3.5 -1.5 3.5 -5s-2 -4 -3 -4s-1.833 .333 -2.5 1"
-              ></path></svg
-            >
-          </a>
-        </div>
-        <p class="mb-6 mt-6">
-          Registro Profesional Estatal Médico Cirujano y Partero 031572-02/24
-        </p>
-        <p class="mb-6">
-          Registro Profesional Estatal Especialidad en Ginecología y Obstetricia
-          031573-02/24
-        </p>
-        <p>Aviso COFEPRIS 2302022002A00068</p>
-      </div>
-    </div>
-  </footer>
+      </footer>
+    )
+  }
 </html>
 
 <style is:global>

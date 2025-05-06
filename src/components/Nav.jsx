@@ -8,8 +8,16 @@ function Nav({ URL }) {
     setIsOpen(!isOpen);
   };
 
+  const links = [
+    { label: "Galería", hash: "galeria" },
+    { label: "Servicios", hash: "servicios" },
+    { label: "Paquetes", hash: "paquetes" },
+    { label: "Blogs", hash: "blog" },
+    { label: "Cirugías", path: "/cirugias/" },
+  ];
+
   return (
-    <nav className=" w-full z-50 flex items-center md:justify-between bg-white text-black p-4 md:h-[124px] border border-gray-400 shadow-xl">
+    <nav className=" w-screen z-50 flex items-center justify-between bg-white text-black p-8 md:h-[124px] border border-gray-400 shadow-xl">
       <div className="flex items-center">
         <a href="/">
           <motion.img
@@ -22,60 +30,20 @@ function Nav({ URL }) {
           />
         </a>
       </div>
-      <div className="md:hidden block px-8 ">
-        <a
-          href={URL === "/agenda/" ? "/contacto/" : "/agenda/"}
-          className="cursor-pointer bg-white mt-4 text-black font-semibold md:text-xl border border-black px-2 py-2 rounded-full font-blisstwine"
-        >
-          {URL === "/agenda/" ? "Contactarme" : "Agendar"}
-        </a>
-      </div>
 
-      {URL === "/" ? (
-        <ul className="flex items-center justify-center space-x-16 font-semibold text-xl">
-          <li>
+      <ul className="md:flex items-center hidden justify-center space-x-16 font-semibold text-xl">
+        {links.map(({ label, hash, path }) => (
+          <li key={label}>
             <motion.a
-              href="#galeria"
+              href={path ? path : URL === "/" ? `#${hash}` : `/#${hash}`}
               whileHover={{ scale: 1.1 }}
               className="cursor-pointer hidden md:block hover:text-[#B09FCD]"
             >
-              Galería
+              {label}
             </motion.a>
           </li>
-
-          <li>
-            <motion.a
-              href="#servicios"
-              whileHover={{ scale: 1.1 }}
-              className="cursor-pointer hidden md:block hover:text-[#B09FCD]"
-            >
-              Servicios
-            </motion.a>
-          </li>
-
-          <li>
-            <motion.a
-              href="#paquetes"
-              whileHover={{ scale: 1.1 }}
-              className="cursor-pointer hidden md:block hover:text-[#B09FCD]"
-            >
-              Paquetes
-            </motion.a>
-          </li>
-
-          <li>
-            <motion.a
-              href="#blog"
-              whileHover={{ scale: 1.1 }}
-              className="cursor-pointer hidden md:block hover:text-[#B09FCD]"
-            >
-              Blog
-            </motion.a>
-          </li>
-        </ul>
-      ) : (
-        <ul></ul>
-      )}
+        ))}
+      </ul>
 
       <motion.a
         whileHover={{ scale: 1.1 }}
@@ -86,7 +54,7 @@ function Nav({ URL }) {
       </motion.a>
       <motion.div
         whileHover={{ scale: 1.1 }}
-        className="cursor-pointer md:hidden block "
+        className="cursor-pointer md:hidden block"
       >
         <button onClick={toggleMenu} className="focus:outline-none">
           <svg
@@ -182,44 +150,21 @@ function Nav({ URL }) {
               </svg>
             </button>
             <div className="flex justify-center items-center flex-col">
-              {/* <a
-                href="/"
-                className="cursor-pointer text-3xl py-4 hover:text-black"
-              >
-                Home
-              </a> */}
-              {URL === "/" ? (
-                <section className="flex flex-col">
-                  <a
-                    href="#galeria"
-                    className="cursor-pointer text-3xl py-4 hover:text-black"
-                  >
-                    Galería
-                  </a>
-                  <a
-                    href="#servicios"
-                    className="cursor-pointer text-3xl py-4 hover:text-black"
-                    onClick={toggleMenu}
-                  >
-                    Servicios
-                  </a>
-                  <a
-                    href="#paquetes"
-                    className="cursor-pointer text-3xl py-4 hover:text-black"
-                    onClick={toggleMenu}
-                  >
-                    Paquetes
-                  </a>
-                  <a
-                    href="#blog"
-                    className="cursor-pointer text-3xl py-4 hover:text-black"
-                  >
-                    Blog
-                  </a>
-                </section>
-              ) : (
-                <ul></ul>
-              )}
+              <ul className="flex flex-col items-center justify-center space-y-8 text-white font-semibold text-xl">
+                {links.map(({ label, hash, path }) => (
+                  <li key={label}>
+                    <motion.a
+                      href={
+                        path ? path : URL === "/" ? `#${hash}` : `/#${hash}`
+                      }
+                      whileHover={{ scale: 1.1 }}
+                      className="cursor-pointer hover:text-[#B09FCD]"
+                    >
+                      {label}
+                    </motion.a>
+                  </li>
+                ))}
+              </ul>
 
               <a
                 href={URL === "/agenda/" ? "/contacto/" : "/agenda/"}

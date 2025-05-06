@@ -1,0 +1,193 @@
+---
+import Arrow from "@components/cirugias/Arrow";
+interface Props {
+  year: string;
+  title: string;
+  subtitle: string;
+  img: string;
+}
+const { year, title, subtitle, img } = Astro.props;
+---
+
+<main class="p-8 bg-[#0d6efd]">
+  <div
+    class="mx-auto container grid grid-cols-1 md:grid-cols-2 gap-8 text-white"
+  >
+    <div class="col-span-1 text-balance md:block hidden">
+      <div
+        class="flex items-start md:items-center justify-between gap-4 mb-4 md:flex-row flex-col"
+      >
+        <span class="text-3xl font-bold">
+          {year}
+        </span>
+        <h1
+          class="text-4xl text-start md:text-center font-bold hover:text-white/70 transition-all duration-300 ease-in-out cursor-pointer"
+        >
+          {title}
+        </h1>
+      </div>
+
+      <p class="text-xl font-light text-start md:text-end">
+        {subtitle}
+      </p>
+    </div>
+    <div class="col-span-1 relative group">
+      <img src={img} alt={title} title={title} />
+      <div
+        class="absolute bottom-2 left-2 md:bottom-10 md:-left-10 overflow-hidden bg-[#fa7bd4] rounded-full"
+      >
+        <Arrow client:visible title={title} />
+      </div>
+    </div>
+    <div class="col-span-1 text-balance md:hidden block">
+      <div
+        class="flex items-start md:items-center justify-between gap-4 mb-4 md:flex-row flex-col"
+      >
+        <span class="text-3xl font-bold">
+          {year}
+        </span>
+        <h1
+          class="text-4xl text-start md:text-center font-bold hover:text-white/70 transition-all duration-300 ease-in-out cursor-pointer"
+        >
+          {title}
+        </h1>
+      </div>
+
+      <p class="text-xl font-light text-start md:text-end">
+        {subtitle}
+      </p>
+    </div>
+    <div class="col-span-1 text-balance md:block hidden">
+      <div
+        class="flex items-start md:items-center justify-between gap-4 mb-4 md:flex-row flex-col"
+      >
+        <span class="text-3xl font-bold">
+          {year}
+        </span>
+        <h1
+          class="text-4xl text-start md:text-center font-bold hover:text-white/70 transition-all duration-300 ease-in-out cursor-pointer"
+        >
+          {title}
+        </h1>
+      </div>
+
+      <p class="text-xl font-light text-start md:text-end">
+        {subtitle}
+      </p>
+    </div>
+    <div class="col-span-1 relative group">
+      <img src={img} alt={title} title={title} />
+      <div
+        class="absolute bottom-2 left-2 md:bottom-10 md:-left-10 overflow-hidden bg-[#fa7bd4] rounded-full"
+      >
+        <Arrow client:visible title={title} />
+      </div>
+    </div>
+    <div class="col-span-1 text-balance md:hidden block">
+      <div
+        class="flex items-start md:items-center justify-between gap-4 mb-4 md:flex-row flex-col"
+      >
+        <span class="text-3xl font-bold">
+          {year}
+        </span>
+        <h1
+          class="text-4xl text-start md:text-center font-bold hover:text-white/70 transition-all duration-300 ease-in-out cursor-pointer"
+        >
+          {title}
+        </h1>
+      </div>
+
+      <p class="text-xl font-light text-start md:text-end">
+        {subtitle}
+      </p>
+    </div>
+    <div class="col-span-1 text-balance md:block hidden">
+      <div
+        class="flex items-start md:items-center justify-between gap-4 mb-4 md:flex-row flex-col"
+      >
+        <span class="text-3xl font-bold">
+          {year}
+        </span>
+        <h1
+          class="text-4xl text-start md:text-center font-bold hover:text-white/70 transition-all duration-300 ease-in-out cursor-pointer"
+        >
+          {title}
+        </h1>
+      </div>
+
+      <p class="text-xl font-light text-start md:text-end">
+        {subtitle}
+      </p>
+    </div>
+    <div class="col-span-1 relative group">
+      <img src={img} alt={title} title={title} />
+      <div
+        class="absolute bottom-2 left-2 md:bottom-10 md:-left-10 overflow-hidden bg-[#fa7bd4] rounded-full"
+      >
+        <Arrow client:visible title={title} />
+      </div>
+    </div>
+    <div class="col-span-1 text-balance md:hidden block">
+      <div
+        class="flex items-start md:items-center justify-between gap-4 mb-4 md:flex-row flex-col"
+      >
+        <span class="text-3xl font-bold">
+          {year}
+        </span>
+        <h1
+          class="text-4xl text-start md:text-center font-bold hover:text-white/70 transition-all duration-300 ease-in-out cursor-pointer"
+        >
+          {title}
+        </h1>
+      </div>
+
+      <p class="text-xl font-light text-start md:text-end">
+        {subtitle}
+      </p>
+    </div>
+    <div class="col-span-1 text-balance md:block hidden">
+      <div
+        class="flex items-start md:items-center justify-between gap-4 mb-4 md:flex-row flex-col"
+      >
+        <span class="text-3xl font-bold">
+          {year}
+        </span>
+        <h1
+          class="text-4xl text-start md:text-center font-bold hover:text-white/70 transition-all duration-300 ease-in-out cursor-pointer"
+        >
+          {title}
+        </h1>
+      </div>
+
+      <p class="text-xl font-light text-start md:text-end">
+        {subtitle}
+      </p>
+    </div>
+    <div class="col-span-1 relative group">
+      <img src={img} alt={title} title={title} />
+      <div
+        class="absolute bottom-2 left-2 md:bottom-10 md:-left-10 overflow-hidden bg-[#fa7bd4] rounded-full"
+      >
+        <Arrow client:visible title={title} />
+      </div>
+    </div>
+    <div class="col-span-1 text-balance md:hidden block">
+      <div
+        class="flex items-start md:items-center justify-between gap-4 mb-4 md:flex-row flex-col"
+      >
+        <span class="text-3xl font-bold">
+          {year}
+        </span>
+        <h1
+          class="text-4xl text-start md:text-center font-bold hover:text-white/70 transition-all duration-300 ease-in-out cursor-pointer"
+        >
+          {title}
+        </h1>
+      </div>
+
+      <p class="text-xl font-light text-start md:text-end">
+        {subtitle}
+      </p>
+    </div>
+  </div>
+</main>

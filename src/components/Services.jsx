@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaArrowRight } from "react-icons/fa6";
 function Services({ services }) {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [modalImage, setModalImage] = useState(null);
@@ -24,11 +25,13 @@ function Services({ services }) {
   const handleSvgClick = (service) => {
     setSelectedService(service);
     setIsModalOpen(true);
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedService(null);
+    document.body.style.overflow = "";
   };
 
   return (
@@ -51,7 +54,7 @@ function Services({ services }) {
                   alt="Atención y cuidado ginecológico de vanguardia "
                   title="Atención y cuidado ginecológico de vanguardia "
                 />
-                <h3 className="text-lg md:text-3xl font-bold font-blisstwine uppercase text-[#71579E]">
+                <h3 className="text-xl md:text-3xl font-bold font-blisstwine uppercase text-[#71579E]">
                   {service.title}
                 </h3>
               </div>
@@ -184,42 +187,12 @@ function Services({ services }) {
         {services.map((service, index) => (
           <div key={index} className="flex flex-col  p-4 border-b border-white">
             <img loading="lazy" src={service.image} alt="" />
-            <h3 className="text-lg md:text-3xl text-start font-bold uppercase text-[#71579E]">
+            <h3 className="text-xl mb-4 mt-4 md:text-3xl text-start font-bold uppercase text-[#71579E]">
               {service.title}
             </h3>
-            <svg
-              className="cursor-pointer"
-              onClick={() => handleSvgClick(service)}
-              width="126"
-              height="126"
-              viewBox="0 0 126 126"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_83_343)">
-                <path
-                  d="M61 86L85 62.5L61 39M81.6667 62.5H33"
-                  stroke="white"
-                  stroke-width="4"
-                  stroke-miterlimit="10"
-                  stroke-linecap="square"
-                />
-              </g>
-              <rect
-                x="2"
-                y="2"
-                width="122"
-                height="122"
-                rx="61"
-                stroke="white"
-                stroke-width="4"
-              />
-              <defs>
-                <clipPath id="clip0_83_343">
-                  <rect width="126" height="126" rx="63" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
+            <button onClick={() => handleSvgClick(service)}>
+              <FaArrowRight className="text-white text-5xl hover:bg-white hover:text-[#71579E] cursor-pointer border rounded-full p-2" />
+            </button>
           </div>
         ))}
 
