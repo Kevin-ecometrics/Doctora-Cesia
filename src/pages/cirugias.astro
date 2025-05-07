@@ -5,6 +5,7 @@ import Hero from "@components/cirugias/Hero.astro";
 import Banner from "@components/cirugias/Banner.astro";
 import ContactMe from "@components/cirugias/ContactMe.astro";
 import Blogs from "@components/Blog";
+import Testimonials from "@components/cirugias/Testimonials";
 
 const blog1 = `
 <h1 class="text-4xl font-bold text-gray-800 mb-4">BRANDING AND IDENTITY DESIGN</h1>
@@ -60,6 +61,7 @@ if (url.includes("cirugias")) {
       subtitle="I created a complete branding package that included a unique logo design, business card, and social media design."
       img="https://static.laralink.com/html/grace/assets/img/services/sv2.jpg"
     />
+    <Testimonials client:visible />
     <ContactMe />
     <Blogs client:visible />
   </main>
