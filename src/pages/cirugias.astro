@@ -1,68 +1,11 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import { slide } from "astro:transitions";
-import Hero from "@components/cirugias/Hero.astro";
 import Banner from "@components/cirugias/Banner.astro";
-import ContactMe from "@components/cirugias/ContactMe.astro";
-import Blogs from "@components/Blog";
-import Testimonials from "@components/cirugias/Testimonials";
-
-const blog1 = `
-<h1 class="text-4xl font-bold text-gray-800 mb-4">BRANDING AND IDENTITY DESIGN</h1>
-<p class="text-lg text-gray-600 mb-6">Branding and identity design visually communicate a company's essence and values, leaving a lasting impression on its audience.</p>
-<br><br>
-<h2 class="text-3xl font-semibold text-gray-800 mb-4">SOCIAL MEDIA GRAPHICS</h2>
-<p class="text-lg text-gray-600 mb-6">Social media graphics captivate and engage audiences, enhancing brand visibility and driving online interactions.</p>
-<br><br>
-<h3 class="text-2xl font-medium text-gray-800 mb-4">WEB DESIGN</h3>
-<p class="text-lg text-gray-600 mb-6">Web design merges aesthetics and functionality to create visually appealing and user-friendly websites that deliver a seamless online experience.</p>
-<br><br>
-<h4 class="text-xl font-medium text-gray-800 mb-4">UI DESIGN</h4>
-<p class="text-lg text-gray-600 mb-6">UI design focuses on crafting intuitive and visually pleasing interfaces that optimize user interactions and enhance overall user experience.</p>
-<br><br>
-<h5 class="text-lg font-medium text-gray-800 mb-4">FrontEnd Development</h5>
-<p class="text-lg text-gray-600 mb-6">FrontEnd Development visually communicates a company's essence and values, leaving a lasting impression on its audience.</p>
-<br><br>
-<h6 class="text-lg font-medium text-gray-800 mb-4">React.js Development</h6>
-<p class="text-lg text-gray-600 mb-6">React.js Development captivates and engages audiences, enhancing brand visibility and driving online interactions.</p>
-<br><br>
-<h6 class="text-lg font-medium text-gray-800 mb-4">Laravel Development</h6>
-<p class="text-lg text-gray-600 mb-6">Laravel Development merges aesthetics and functionality to create visually appealing and user-friendly websites that deliver a seamless online experience.</p>
-<br><br>
-<h6 class="text-lg font-medium text-gray-800 mb-4">Digital Marketing</h6>
-<p class="text-lg text-gray-600 mb-6">Digital Marketing focuses on crafting intuitive and visually pleasing interfaces that optimize user interactions and enhance overall user experience.</p>
-<br><br>
-`;
-
-const title1 = "BRANDING AND IDENTITY DESIGN";
-const description1 =
-  "This service includes creating a unique brand identity for your clients, which includes designing a logo, business card, letterhead, and other branding materials.";
-
-const url = Astro.url.pathname;
-let blog, title, description;
-
-if (url.includes("cirugias")) {
-  blog = blog1;
-  title = title1;
-  description = description1;
-} else {
-  blog = "<h1>DEFAULT BLOG</h1><p>This is the default blog content.</p>";
-  title = "DEFAULT TITLE";
-  description = "This is the default description.";
-}
 ---
 
 <Layout title="Cirugías | Dra Cesia Borjon">
   <main class="bg-white" transition:animate={slide({ duration: "1s" })}>
-    <Hero title={title} description={description} blogtext={blog} />
-    <Banner
-      year="2025"
-      title="BOLDIFY BRAND IDENTITY"
-      subtitle="I created a complete branding package that included a unique logo design, business card, and social media design."
-      img="https://static.laralink.com/html/grace/assets/img/services/sv2.jpg"
-    />
-    <Testimonials client:visible />
-    <ContactMe />
-    <Blogs client:visible />
+    <Banner />
   </main>
 </Layout>

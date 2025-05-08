@@ -1,0 +1,290 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { slide } from "astro:transitions";
+import Hero from "@components/cirugias/Hero.astro";
+import Banner from "@components/cirugias/Banner.astro";
+import ContactMe from "@components/cirugias/ContactMe.astro";
+import Blogs from "@components/Blog";
+import Testimonials from "@components/cirugias/Testimonials";
+
+export function getStaticPaths() {
+  return [
+    {
+      params: {
+        cirugia:
+          "histerectomia-en-tijuana-con-cesia-borjon-todo-lo-que-necesitas-saber",
+      },
+    },
+    {
+      params: {
+        cirugia:
+          "laparoscopia-ginecologica-para-quistes-miomas-y-mas-como-funciona",
+      },
+    },
+    {
+      params: {
+        cirugia:
+          "todo-lo-que-debes-saber-sobre-la-colposcopia-un-examen-para-tu-bienestar",
+      },
+    },
+  ];
+}
+
+const { cirugia } = Astro.params;
+
+const service1 = `
+<h1 class="text-4xl font-bold text-gray-800 mb-4">Histeroscopia</h1>
+<p class="text-lg text-gray-600 mb-6">
+Es una cirugía que consiste en extirpar el útero y el cuello uterino. Este tipo de procedimiento se lleva a cabo cuando existe una serie de complicaciones en la salud del paciente que involucra: Fibromas uterinos, sangrado vaginal profundo, prolapso uterino, endometriosis, adenomatosis, cáncer o riesgo de cáncer de útero, ovarios, cuello uterino o endometrio.
+</p>
+<p class="text-lg text-gray-600 mb-6">
+Es la segunda cirugía ginecológica más frecuente, después de la cesárea, según cifras provenientes de Norteamérica y Europa.
+</p>
+
+<h2 class="text-3xl font-semibold text-gray-800 mb-4">Hay 3 tipos principales de histerectomía</h2>
+<ul class="list-disc list-inside text-lg text-gray-600 mb-6">
+  <li>Histerectomía total: Se extrae el cuello uterino y el cuerpo del útero juntos.</li>
+  <li>Histerectomía parcial o subtotal: Solo se extrae el útero, pero no el cuello uterino.</li>
+  <li>Histerectomía radical: Se extirpan el útero y los tejidos vecinos, generalmente porque hay un cáncer presente.</li>
+</ul>
+
+<h2 class="text-3xl font-semibold text-gray-800 mb-4">Histerectomía mínimamente invasiva (HMI): Abordajes y consideraciones clínicas</h2>
+<p class="text-lg text-gray-600 mb-6">
+La histerectomía mínimamente invasiva (HMI) es una técnica quirúrgica que prioriza la reducción de incisiones abdominales, permitiendo la extracción del útero mediante procedimientos internos sin exposición externa del órgano. Este enfoque, que incluye incisiones de aproximadamente 1 cm, se asocia con un menor riesgo de sangrado intraoperatorio y un postoperatorio más breve en comparación con la cirugía abierta.
+</p>
+
+<h3 class="text-2xl font-medium text-gray-800 mb-4">Histerectomía vaginal asistida por laparoscopia (HVAL)</h3>
+<p class="text-lg text-gray-600 mb-6">
+<strong>Procedimiento:</strong> Se seccionan los ligamentos redondos, útero-ováricos y útero sacros (sin intervención de los vasos uterinos). El resto del procedimiento (ligadura de vasos uterinos, apertura de cúpula vaginal y extracción del útero) se completa por vía vaginal.
+</p>
+<p class="text-lg text-gray-600 mb-6">
+<strong>Indicaciones:</strong> Se recomienda en casos donde la vía vaginal es viable anatómicamente.
+</p>
+
+<h3 class="text-2xl font-medium text-gray-800 mb-4">Histerectomía laparoscópica (HL)</h3>
+<p class="text-lg text-gray-600 mb-6">
+<strong>Procedimiento:</strong> Se ligan y cortan todos los ligamentos que fijan el útero. Solo la apertura de la cúpula vaginal y la extracción se hacen por vía vaginal.
+</p>
+<p class="text-lg text-gray-600 mb-6">
+<strong>Ventaja:</strong> Minimiza la manipulación vaginal durante etapas críticas.
+</p>
+
+<h3 class="text-2xl font-medium text-gray-800 mb-4">Histerectomía totalmente laparoscópica (HTL)</h3>
+<p class="text-lg text-gray-600 mb-6">
+<strong>Procedimiento:</strong> Todas las etapas (apertura de cúpula vaginal, extracción del útero y cierre) se realizan por laparoscopia.
+</p>
+<p class="text-lg text-gray-600 mb-6">
+<strong>Recomendación:</strong> Úteros de tamaño moderado.
+</p>
+
+<h3 class="text-2xl font-medium text-gray-800 mb-4">Histerectomía robótica</h3>
+<p class="text-lg text-gray-600 mb-6">
+En este abordaje, el cirujano opera mediante brazos robóticos controlados desde una consola, lo que permite una precisión milimétrica. Se realizan incisiones diminutas de 1 cm aproximadamente, en las que se introduce el laparoscopio, lo que permite una visualización tridimensional de la articulación. Además, los instrumentos optimizados mejoran la disección de tejidos y reducen riesgos asociados a movimientos involuntarios.
+</p>
+
+<h2 class="text-3xl font-semibold text-gray-800 mb-4">Qué esperar durante la cirugía</h2>
+<p class="text-lg text-gray-600 mb-6">
+Estarás recostada boca arriba, en una posición similar a la que te colocas para una prueba de Papanicolaou. Es posible que te inserten un catéter urinario para vaciar la vejiga. Un miembro del equipo quirúrgico limpiará el área de la cirugía con una solución estéril antes de la misma.
+</p>
+<p class="text-lg text-gray-600 mb-6">
+Después de que te apliquen anestesia, el médico hará pequeñas incisiones en tu abdomen e introducirá instrumentos quirúrgicos.
+</p>
+
+<h2 class="text-3xl font-semibold text-gray-800 mb-4">Cuidados postoperatorios</h2>
+<ul class="list-disc list-inside text-lg text-gray-600 mb-6">
+  <li><strong>Reposo relativo:</strong> Evitar carga de peso durante 4 semanas.</li>
+  <li><strong>Caminatas progresivas:</strong> Desde el primer día postoperatorio.</li>
+  <li><strong>Evitar ejercicios de alto impacto:</strong> Correr, levantar pesas por 4-6 semanas.</li>
+  <li><strong>Actividad sexual:</strong> Abstinencia sexual y evitar introducción de objetos en vagina por 6 semanas.</li>
+  <li><strong>Cuidado de heridas:</strong> Mantener incisiones limpias y secas; evitar baños o nadar por 2 semanas.</li>
+  <li><strong>Ducha:</strong> Permitida a las 24-48 horas postcirugía.</li>
+  <li><strong>Sangrado leve:</strong> Puede presentarse las primeras semanas. Se recomienda usar toallas sanitarias y evitar tampones.</li>
+</ul>
+`;
+
+const service2 = `
+<h1 class="text-4xl font-bold text-gray-800 mb-4">Laparoscopia ginecológica</h1>
+<p class="text-lg text-gray-600 mb-6">
+Es un procedimiento mínimamente invasivo para diagnosticar o tratar condiciones en el útero, trompas de falopio, ovarios y estructuras adyacentes.
+</p>
+<p class="text-lg text-gray-600 mb-6">
+Primero se introduce dióxido de carbono estéril en la cavidad abdominal mediante una aguja especializada. Este gas eleva la pared abdominal, separándola de los órganos internos y creando un espacio que facilita una visualización clara y segura de las estructuras internas.
+</p>
+<p class="text-lg text-gray-600 mb-6">
+Después, mediante una pequeña incisión (generalmente cerca del ombligo), se introduce un laparoscopio, un instrumento delgado con luz y cámara de alta resolución. Este dispositivo transmite imágenes en tiempo real a un monitor, facilitando la evaluación detallada de los órganos.
+</p>
+<p class="text-lg text-gray-600 mb-6">
+Según el caso, se pueden realizar una o más incisiones adicionales, de aproximadamente 1 cm, para introducir herramientas que permitan manipular los tejidos. Este procedimiento es bastante breve, genera menos tiempo de recuperación y riesgo de infección o sangrado.
+</p>
+
+<h2 class="text-3xl font-semibold text-gray-800 mb-4">Cirugía de mínima invasión para endometriosis</h2>
+<p class="text-lg text-gray-600 mb-6">
+La endometriosis es un trastorno inflamatorio crónico dependiente del estrógeno, donde tejido similar al del útero crece fuera de este. Y el tejido que crece en estos lugares reacciona con las hormonas, causando dolor, inflamación, náuseas, sangrado abundante, etc.
+</p>
+<p class="text-lg text-gray-600 mb-6">
+Entre los lugares más frecuentes fuera del útero donde crece el tejido endometrial se encuentran:
+</p>
+<ul class="list-disc list-inside text-lg text-gray-600 mb-6">
+  <li><strong>Ovarios:</strong> Forma quistes oscuros llamados endometriomas. Si se rompen, causan dolor intenso, náuseas o vómitos.</li>
+  <li><strong>Intestino:</strong> Hinchazón, dolor al evacuar, estreñimiento/diarrea o sangrado rectal durante la menstruación.</li>
+  <li><strong>Vejiga:</strong> Dolor al orinar, sangre en la orina o urgencia para ir al baño.</li>
+</ul>
+
+<h3 class="text-2xl font-medium text-gray-800 mb-4">Cirugía de Mínima Invasión en Endometriosis: Criterios Técnicos</h3>
+<p class="text-lg text-gray-600 mb-6">
+La selección de la técnica quirúrgica se basa en un enfoque individualizado, considerando los siguientes factores:
+</p>
+<ul class="list-disc list-inside text-lg text-gray-600 mb-6">
+  <li><strong>La edad de la paciente:</strong> En pacientes jóvenes, se priorizan técnicas conservadoras para preservar la función ovárica.</li>
+  <li><strong>Deseo reproductivo:</strong> Ante un interés de fertilidad futura, se opta por métodos que minimicen el daño al tejido ovárico sano.</li>
+  <li><strong>Reserva ovárica:</strong>
+    <ul class="list-disc list-inside ml-6">
+      <li><strong>Reserva adecuada:</strong> Cistectomía (resección completa del quiste).</li>
+      <li><strong>Reserva disminuida:</strong> Drenaje simple del endometrioma para reducir riesgos de hipofertilidad.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 class="text-3xl font-semibold text-gray-800 mb-4">Miomectomía laparoscópica</h2>
+<p class="text-lg text-gray-600 mb-6">
+La miomectomía laparoscópica es una técnica mínimamente invasiva que permite extirpar fibromas o miomas uterinos conservando el útero. Está indicada en mujeres que desean mantener su fertilidad y reducir síntomas como sangrados abundantes, dolor pélvico o problemas reproductivos.
+</p>
+<p class="text-lg text-gray-600 mb-6">
+Los miomas uterinos son nódulos o masas de músculo liso que se originan en el miometrio o pared muscular del útero. Afectan entre el 30% al 50% de las mujeres, especialmente entre sus 30 y 50 años.
+</p>
+<p class="text-lg text-gray-600 mb-6">
+<strong>Síntomas más comunes:</strong>
+</p>
+<ul class="list-disc list-inside text-lg text-gray-600 mb-6">
+  <li>Sangrados menstruales muy abundantes o prolongados.</li>
+  <li>Dolor pélvico o lumbar.</li>
+  <li>Presión sobre la vejiga o el recto, con urgencia urinaria o estreñimiento.</li>
+  <li>Dificultades para concebir o riesgos de aborto recurrente.</li>
+</ul>
+
+<h3 class="text-2xl font-medium text-gray-800 mb-4">Clasificación según localización (FIGO)</h3>
+<ul class="list-disc list-inside text-lg text-gray-600 mb-6">
+  <li><strong>Subserosos (55%):</strong> Crecen hacia la cara externa del útero.</li>
+  <li><strong>Intramurales (40%):</strong> Se desarrollan dentro de la pared muscular.</li>
+  <li><strong>Submucosos (5%):</strong> Penetran en la cavidad uterina, asociándose a menorragias intensas.</li>
+</ul>
+
+<h3 class="text-2xl font-medium text-gray-800 mb-4">Criterios de selección para miomectomía laparoscópica</h3>
+<ul class="list-disc list-inside text-lg text-gray-600 mb-6">
+  <li><strong>Tamaño máximo del mioma:</strong> ≤ 10 cm (en general, ≤ 9 cm para un abordaje más sencillo).</li>
+  <li><strong>Número de miomas:</strong> Hasta 3–4 unidades, siempre que ninguno supere 4–5 cm.</li>
+  <li><strong>Localización predominante:</strong> Intramurales o subserosos.</li>
+  <li><strong>Deseo de conservación uterina y fertilidad futura.</strong></li>
+</ul>
+
+<h2 class="text-3xl font-semibold text-gray-800 mb-4">Resección de tumores de ovario por vía laparoscópica</h2>
+<p class="text-lg text-gray-600 mb-6">
+Los tumores de ovario son protuberancias conformadas por tejidos que se desarrollan de forma anormal en el ovario. Afectan a unas 1 de cada 10 mujeres a lo largo de su vida, con pico de incidencia entre los 35 y 65 años (climaterio).
+</p>
+<p class="text-lg text-gray-600 mb-6">
+<strong>Naturaleza:</strong>
+</p>
+<ul class="list-disc list-inside text-lg text-gray-600 mb-6">
+  <li><strong>Benignos (75–85%):</strong> Quistes funcionales, teratomas maduros, endometriomas.</li>
+  <li><strong>Sospechosos o malignos (15–25%):</strong> Requieren estudio histológico.</li>
+</ul>
+<p class="text-lg text-gray-600 mb-6">
+<strong>Síntomas:</strong>
+</p>
+<ul class="list-disc list-inside text-lg text-gray-600 mb-6">
+  <li>Aumento lento de volumen abdominal.</li>
+  <li>Distensión, molestias digestivas o urinarias.</li>
+  <li>Dolor agudo o subagudo ante torsión, rotura o hemorragia.</li>
+  <li>Raramente, cuadros endocrinos o metabólicos asociados (hirsutismo, pubertad precoz, hipercalcemia, etc.).</li>
+</ul>
+<p class="text-lg text-gray-600 mb-6">
+La laparoscopia es una cirugía mínimamente invasiva que, en este caso, se realiza con tres pequeños orificios en el abdomen. Primero, se hace una pequeña incisión en el ombligo para colocar un tubo delgado (trócar) de 5 mm. A través de este, se introduce gas (como dióxido de carbono) para inflar el abdomen y permitir ver mejor los órganos. Luego, se inserta una cámara con una lente de 30 grados para guiar el procedimiento.
+</p>
+<p class="text-lg text-gray-600 mb-6">
+Bajo la visión de la cámara, se colocan otros dos tubos: uno de 5 mm en el lado donde está el tumor y otro (de 5 o 12 mm) en el lado opuesto. El tamaño del segundo tubo depende de las herramientas que el cirujano prefiera usar para cortar y sellar el tumor, como instrumentos eléctricos (monopolares/bipolares) o dispositivos de sutura mecánica. En algunos casos, se agrega un cuarto tubo de 5 mm si es necesario para manipular el tumor con mayor facilidad.
+</p>
+`;
+
+const service3 = `
+<h1 class="text-4xl font-bold text-gray-800 mb-4">Colposcopia</h1>
+<p class="text-lg text-gray-600 mb-6">
+Un examen clave para detectar cambios anormales en el cuello uterino, la vagina o la vulva, especialmente si tu último Papanicolaou mostró algo que requiere mayor atención. Durante el procedimiento se busca células anormales, que podrían ser cancerosas o precancerosas.
+</p>
+
+<h2 class="text-3xl font-semibold text-gray-800 mb-4">¿En qué consiste una colposcopia?</h2>
+<p class="text-lg text-gray-600 mb-6">
+Durante el procedimiento te recostarás boca arriba sobre una camilla con los pies sobre los soportes, igual que en un examen pélvico o un examen de Papanicolaou. Posteriormente, se utilizará un colposcopio (un dispositivo con luz y aumento) para visualizar con detalle las zonas que necesitamos evaluar. Si identificamos áreas sospechosas, tomaremos una pequeña muestra de tejido (biopsia) para analizarla. Puede haber una leve molestia, pero siempre priorizamos tu comodidad: puedes tomar un analgésico antes si lo consideramos necesario.
+</p>
+<p class="text-lg text-gray-600 mb-6">
+La muestra se suele tomar del cuello uterino. Este procedimiento se conoce como biopsia cervical. También se pueden hacer biopsias de la vagina o de la vulva. Los resultados de una biopsia van a mostrar si tiene células cancerosas o precancerosas.
+</p>
+
+<h2 class="text-3xl font-semibold text-gray-800 mb-4">¿Por qué se recomienda?</h2>
+<p class="text-lg text-gray-600 mb-6">
+También se puede usar para:
+</p>
+<ul class="list-disc list-inside text-lg text-gray-600 mb-6">
+  <li>Identificar verrugas genitales, que pueden ser un signo de una infección por VPH (virus del papiloma humano). La infección por VPH puede aumentar el riesgo de tener cáncer cervical, de vagina o de vulva.</li>
+  <li>Detectar crecimientos no cancerosos llamados pólipos.</li>
+  <li>Comprobar si hay irritación o inflamación en el cuello uterino.</li>
+  <li>Buscar la causa de sangrado vaginal irregular o picazón de la vulva.</li>
+</ul>
+
+<h2 class="text-3xl font-semibold text-gray-800 mb-4">Preparación y cuidados posteriores</h2>
+<ul class="list-disc list-inside text-lg text-gray-600 mb-6">
+  <li>Evita duchas vaginales, tampones, relaciones sexuales o medicamentos vaginales 48 horas antes.</li>
+  <li>Programa el procedimiento fuera de tu menstruación.</li>
+  <li>Después, es normal tener un pequeño sangrado o flujo oscuro.</li>
+</ul>
+`;
+const title1 = "Histerectomía en Tijuana con Cesia Borjón: ¿Qué Esperar?";
+const description1 =
+  "Enfrentar una histerectomía con calma y seguridad, guiado por la Dra. Cesia Borjón experta en cirugía mínimamente invasiva.";
+
+const title2 =
+  "Laparoscopia Ginecológica para Quistes, Miomas y más en Tijuana ";
+const description2 =
+  "Cirugía con incisiones mínimas, reduce el dolor, acelera la recuperación y minimiza las cicatrices. Recupera tu  bienestar de forma segura y efectiva. ";
+
+const title3 =
+  "Colposcopia en Tijuana: Un Examen Preventivo para Tu Bienestar ";
+const description3 =
+  "La colposcopia es un procedimiento preventivo que permite detectar anomalías en el cuello uterino de manera temprana. Con la Dra. Cesia Borjón, obtén un examen preciso y profesional para cuidar tu bienestar.";
+
+let service, title, description;
+
+if (
+  cirugia ===
+  "histerectomia-en-tijuana-con-cesia-borjon-todo-lo-que-necesitas-saber"
+) {
+  service = service1;
+  title = title1;
+  description = description1;
+} else if (
+  cirugia ===
+  "laparoscopia-ginecologica-para-quistes-miomas-y-mas-como-funciona"
+) {
+  service = service2;
+  title = title2;
+  description = description2;
+} else if (
+  cirugia ===
+  "todo-lo-que-debes-saber-sobre-la-colposcopia-un-examen-para-tu-bienestar"
+) {
+  service = service3;
+  title = title3;
+  description = description3;
+} else {
+  null;
+}
+---
+
+<Layout title=`${title}`>
+  <main class="bg-white" transition:animate={slide({ duration: "1s" })}>
+    <Hero title={title} description={description} blogtext={service} />
+    <Banner />
+    <Testimonials client:visible />
+    <ContactMe />
+    <Blogs client:visible />
+  </main>
+</Layout>

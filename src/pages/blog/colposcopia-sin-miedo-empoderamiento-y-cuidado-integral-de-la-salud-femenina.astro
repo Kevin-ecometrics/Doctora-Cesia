@@ -1,0 +1,207 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { fade } from "astro:transitions";
+import posts from "@components/blogs/blogList";
+import { FaArrowsAltH } from "react-icons/fa";
+
+let title = "Salud Cervical: ¿Qué es la Colposcopia y Por Qué es Importante? ";
+---
+
+<Layout title={title}>
+  <main transition:animate={fade({ duration: "1s" })}>
+    <img
+      src="/Estudio de colposcopia en Tijuana con la Dra. Cesia Borjon ginecoobstetra con mas de 15 anios de experiencia.webp"
+      class="w-full"
+      alt="Estudio de colposcoia por la Dra. Cesia Borjon en Tijuana "
+      title="Estudio de colposcoia por la Dra. Cesia Borjon en Tijuana"
+    />
+    <div class="px-8 flex gap-4 bg-[#7DCAD9] py-8">
+      <div class="md:w-[80%] p-4 bg-white rounded-3xl overflow-x-hidden h-full">
+        <aside class="p-4 block md:hidden">
+          <div class="bg-white bg-opacity-60 mb-4 rounded-3xl p-4">
+            <div class="border border-[#B09FCD] w-[169px] mb-4"></div>
+            <h1 class="font-glorich font-black text-3xl mb-4 text-[#626262]">
+              ÚLTIMOS BLOGS
+            </h1>
+            <div class="flex gap-4 items-start flex-col">
+              {
+                posts.map((post) => (
+                  <ul>
+                    <div class="flex flex-col items-start">
+                      <a href={post.link}>
+                        <li
+                          class="text-black
+                      font-glorich font-black md:text-xl mb-8  uppercase"
+                        >
+                          {post.title}
+                        </li>
+                      </a>
+                      <li
+                        class="text-[#C0BCBC]
+                      font-glorich font-black md:text-xl  uppercase"
+                      >
+                        {post.date}
+                      </li>
+                      <li
+                        class="text-[#C0BCBC]
+                      font-glorich font-black md:text-xl  uppercase"
+                      >
+                        <a href={post.link}>Ver Blog</a>
+                      </li>
+                    </div>
+                  </ul>
+                ))
+              }
+            </div>
+          </div>
+        </aside>
+        <div class="flex gap-8 mb-8">
+          <div class="border bg-[#7DCAD9] w-4 border-[#7DCAD9]"></div>
+          <div class="flex flex-col">
+            <h1
+              class="font-glorich font-black text-2xl md:text-4xl text-[#B09FCD]"
+            >
+              Colposcopia: Herramienta Clave para la Detección Temprana del
+              Cáncer Cervical
+            </h1>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div>
+            <h1 class="font-binomaRegular md:text-xl text-[#626262] mb-8">
+              <br /> Hoy quiero hablarte sobre la colposcopia, un examen clave para
+              detectar cambios anormales en el cuello uterino, la vagina o la vulva,
+              especialmente si tu último Papanicolaou mostró algo que requiere mayor
+              atención por ejemplo anormalias en tus células, cambios en tu zona
+              genital si tu parea presenta cambios en su zona genital o has tenido
+              sangrados anormales.
+
+              <strong>¿Cómo se hace? </strong>
+              <br />
+            </h1>
+
+            <h1 class="font-binomaRegular md:text-xl text-[#626262] mb-8">
+              <strong>
+                En el consultorio, todo está pensado para que te sientas cómoda:
+              </strong>
+              Te daré una bata y te acomodarás en la camilla (igual que en un Papanicolaou),
+              boca arriba y con los pies en los soportes.
+              <br />
+              <br />
+              Usaré un espéculo (ese instrumento que abre suavemente la vagina) para
+              visualizar mejor.
+              <br />
+              <br />
+              Con el colposcopio (un microscopio especial con luz) examinaré con
+              detalle el cuello uterino, la vagina y la vulva.
+              <br /><br />
+            </h1>
+            <img
+              src="/La prueba de colposcopia es breve y sin dolor en el consultorio de la Dra. Cesia Borjon.webp"
+              alt="La prueba de colposcopia es una herramienta para detección temprana breve y sin dolor "
+              title="La prueba de colposcopia es una herramienta para detección temprana breve y sin dolor "
+            />
+          </div>
+
+          <div>
+            <img
+              src="/La colposcopia nos permite identificar celulas anormales en el cuello uterino, vagina o vulva, polipos o verrugas por VPH.webp"
+              class="mb-8"
+              alt="Descubre el esquema de vacunación Gardasil 9 para prevenir el VPH con la Dra. Cesia  "
+              title="Descubre el esquema de vacunación Gardasil 9 para prevenir el VPH con la Dra. Cesia  "
+            />
+            <h1 class="font-binomaRegular md:text-xl text-[#626262]">
+              <strong> Tu bienestar es lo primero </strong>
+              <br />
+              <br />
+
+              Sé que palabras como "biopsia" o "lesiones" pueden asustar, pero
+              recuerda: la colposcopia es prevención. Detectamos a tiempo para
+              actuar a tiempo. Y aunque el procedimiento puede causar una leve
+              molestia, dura solo 10-20 minutos y estaré ahí para guiarte en
+              cada paso.
+              <br />
+              <br />
+              <strong> Después del examen: </strong>
+              Evita relaciones sexuales, tampones o duchas vaginales por 48 horas.
+              <br />
+              <br />
+              <strong> Un pequeño sangrado o flujo oscuro es normal </strong>
+              La colposcopia es una herramienta más para cuidarte, me es importante
+              brindarte información para empoderar tus decisiones y el cuidado de
+              tu salud. Si tienes dudas, estoy aquí para resolverlas.
+              <br />
+              <br />
+            </h1>
+          </div>
+        </div>
+        <div class="bg-[#B09FCD] w-full py-8 rounded-3xl mb-8">
+          <h1 class="text-center md:text-3xl font-glorich text-white py-4 px-8">
+            “La salud ginecológica no debería ser un tema de miedo o vergüenza.”
+          </h1>
+        </div>
+        <h2 class="font-binomaRegular md:text-xl text-[#626262]">
+          ¿Ya te han hecho una colposcopia? ¿Qué dudas te gustaría resolver
+          antes de agendar tu cita?
+          <br />
+          <br />
+          Me encuentro cerca de ti en Tijuana a 10 minutos de la linea San Ysidro-Tijuana
+          <br />
+          <br />
+          Te invito a agendar tu consulta presencial o en línea
+          <br />
+        </h2>
+        <br />
+
+        <br />
+
+        <hr class="mb-4" />
+      </div>
+
+      <aside class="md:w-[25%] p-4 hidden md:block">
+        <div class="bg-white bg-opacity-60 mb-4 rounded-3xl p-4">
+          <div class="border border-[#B09FCD] w-[169px] mb-4"></div>
+          <h1 class="font-glorich font-black text-3xl mb-4 text-[#626262]">
+            ÚLTIMOS BLOGS
+          </h1>
+          <div class="flex gap-4 items-start flex-col">
+            {
+              posts.map((post) => (
+                <ul>
+                  <div class="flex flex-col items-start">
+                    <a href={post.link}>
+                      <li
+                        class="text-black
+                    font-glorich font-black md:text-xl mb-8  uppercase"
+                      >
+                        {post.title}
+                      </li>
+                    </a>
+                    <li
+                      class="text-[#C0BCBC]
+                    font-glorich font-black md:text-xl  uppercase"
+                    >
+                      {post.date}
+                    </li>
+                    <li
+                      class="text-[#C0BCBC]
+                      font-glorich font-black md:text-xl  uppercase"
+                    >
+                      <a href={post.link}>Ver Blog</a>
+                    </li>
+                  </div>
+                </ul>
+              ))
+            }
+          </div>
+        </div>
+
+        <img
+          src="/Sientete segurx  con la Dra.  Cesia experta en  nacimiento  respetado y  ginecologia.webp"
+          alt="En Tijuana Siéntete segurx con la Dra. Cesia experta en nacimiento respetado y ginecología"
+          title="En Tijuana Siéntete segurx con la Dra. Cesia experta en nacimiento respetado y ginecología"
+        />
+      </aside>
+    </div>
+  </main>
+</Layout>

@@ -6,19 +6,37 @@ const images = [
     src: "/Nacimiento respetado asistido por la Dra. Cesia Borjon.webp",
     href: "/blog/Acuerpar-el-nacimiento/",
     title: "Acuerpar el nacimiento",
-    alt: "Nacimiento respetado asistido por la Dra. Ginecoobstetra Cesia Borjón  ",
+    alt: "Nacimiento respetado asistido por la Dra. Ginecoobstetra Cesia Borjón",
   },
   {
     src: "/Aborto libre de estigma en tu consultorio ginecologico.webp",
     href: "/blog/La-esencialidad-y-libertad-que-implica-el-aborto-libre-de-estigma/",
     title: "La esencialidad y libertad que implica el aborto libre de estigma",
-    alt: "Consultorio ginecologico violeta y aborto libre de estigma ",
+    alt: "Consultorio ginecológico violeta y aborto libre de estigma",
   },
   {
     src: "/Deteccion y tratamiento del VPH en tu consultorio ginecologico.webp",
     href: "/blog/Que-hacer-si-te-han-detectado-el-virus-del-papiloma-humano/",
     title: "¿Qué hacer si te han detectado el virus del papiloma humano?",
-    alt: "Deteccion y tratamiento del Virus del Papiloma Humano en tu consultorio ginecologico con la Dra. Cesia",
+    alt: "Detección y tratamiento del Virus del Papiloma Humano en tu consultorio ginecológico con la Dra. Cesia",
+  },
+  {
+    src: "/mas-que-una-cirugia-afrontar-el-duelo-tras-una-histerectomia.webp",
+    href: "/blog/histerectomia-en-tijuana-mas-que-una-cirugia-una-experiencia-humana/",
+    title: "Más que una Cirugía: Afrontar el Duelo tras una Histerectomía",
+    alt: "Histerectomía en Tijuana: Más que una cirugía, una experiencia humana",
+  },
+  {
+    src: "/cirugia-minima-invasiva-y-robotica-en-tijuana-con-cesia-borjon.webp",
+    href: "/blog/Revolucionando-la-Ginecologia-Como-la-Cirugia-Minimamente-Invasiva-Mejora-la-Vida-de-las-Pacientes/",
+    title: "Cirugía mínima invasiva y robótica en Tijuana con Cesia Borjón",
+    alt: "Revolucionando la ginecología con cirugía mínimamente invasiva y robótica en Tijuana",
+  },
+  {
+    src: "/salud-cervical-que-es-la-colposcopia-y-por-que-es-importante.webp",
+    href: "/blog/colposcopia-sin-miedo-empoderamiento-y-cuidado-integral-de-la-salud-femenina/",
+    title: "Salud Cervical: ¿Qué es la Colposcopia y Por Qué es Importante?",
+    alt: "Colposcopia sin miedo: Empoderamiento y cuidado integral de la salud femenina",
   },
 ];
 

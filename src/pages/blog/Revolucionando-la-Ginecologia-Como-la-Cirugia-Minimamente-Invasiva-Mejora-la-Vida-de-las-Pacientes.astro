@@ -1,0 +1,247 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { fade } from "astro:transitions";
+import posts from "@components/blogs/blogList";
+
+let title = "Cirugía mínima invasiva y robótica en Tijuana con Cesia Borjón";
+---
+
+<Layout title={title}>
+  <main transition:animate={fade({ duration: "1s" })}>
+    <img
+      src="/La doctora Cesia borjon es una experta en procedimientos minimos invasivos en tijuana.webp"
+      class="w-full"
+      alt="La doctor cesia ha recibido multiples certificaciones en cirugias por laparoscopicas  "
+      title="La doctor cesia ha recibido multiples certificaciones en cirugias por laparoscopicas  "
+    />
+    <div class="px-8 flex gap-4 bg-[#7DCAD9] py-8">
+      <div class="md:w-[80%] p-4 bg-white rounded-3xl overflow-x-hidden h-full">
+        <aside class="p-4 block md:hidden">
+          <div class="bg-white bg-opacity-60 mb-4 rounded-3xl p-4">
+            <div class="border border-[#B09FCD] w-[169px] mb-4"></div>
+            <h1 class="font-glorich font-black text-3xl mb-4 text-[#626262]">
+              ÚLTIMOS BLOGS
+            </h1>
+            <div class="flex gap-4 items-start flex-col">
+              {
+                posts.map((post) => (
+                  <ul>
+                    <div class="flex flex-col items-start">
+                      <a href={post.link}>
+                        <li
+                          class="text-black
+                      font-glorich font-black md:text-xl mb-8  uppercase"
+                        >
+                          {post.title}
+                        </li>
+                      </a>
+                      <li
+                        class="text-[#C0BCBC]
+                      font-glorich font-black md:text-xl  uppercase"
+                      >
+                        {post.date}
+                      </li>
+                      <li
+                        class="text-[#C0BCBC]
+                      font-glorich font-black md:text-xl  uppercase"
+                      >
+                        <a href={post.link}>Ver Blog</a>
+                      </li>
+                    </div>
+                  </ul>
+                ))
+              }
+            </div>
+          </div>
+        </aside>
+        <div class="flex gap-8 mb-8">
+          <div class="border bg-[#7DCAD9] w-4 border-[#7DCAD9]"></div>
+          <div class="flex flex-col">
+            <h1
+              class="font-glorich font-black text-2xl md:text-4xl text-[#B09FCD]"
+            >
+              Revolución en Ginecología: Menos cicatrices más autonomía con
+              cirugía Mínimamente Invasiva y Robótica
+            </h1>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div>
+            <h1 class="font-binomaRegular md:text-xl text-[#626262] mb-8">
+              <br /> Parte de recibir una atención medica es ofrecer las mejores
+              alternativas para tu bienestar. Como ginecóloga obstetra es mi responsabilidad
+              y misión capacitarme para garantizarte un acceso a una medicina segura
+              y con libertad.
+              <br />
+              <br />
+              Brindar una cirugía mínimamente invasiva y robótica no se trata de
+              privilegio se trata un derecho para garantizar tu bienestar honrando
+              tu autonomía para decidir.
+
+              <strong
+                >Ventajas que trasforman en la Cirugía mínima invasiva (CIM) y
+                robótica sobre la cirugía abierta:
+              </strong>
+              <br />
+            </h1>
+            <ol
+              class="list-inside list-decimal text-[#626262] font-binomaRegular mb-4"
+            >
+              <li class="mb-2">
+                Menor sangrado y dolor posquirúrgico: Para una recuperación con
+                energía y dignidad
+              </li>
+              <li class="mb-2">
+                Hospitalización breve: Permite regresar a casa en un espacio
+                seguro
+              </li>
+              <li class="mb-2">
+                Cicatrices mínimas: Existe un respeto hacia tu cuerpo más allá
+                del procedimiento en el que se busca no dejar marcas invasivas.
+              </li>
+              <li class="mb-2">
+                Reincorporación rápida: Recuperar la rutina, el trabajo y agenda
+                personal sin comprometer la salud.
+              </li>
+            </ol>
+            <h1 class="font-binomaRegular md:text-xl text-[#626262] mb-8">
+              <strong>
+                La cirugía asistida por robot nos brinda herramientas
+                revolucionarias:
+              </strong>
+              <ol
+                class="list-inside list-decimal text-[#626262] font-binomaRegular"
+              >
+                <li class="mb-2">
+                  Visión tridimensional: Atención milimétrica para
+                  intervenciones seguras
+                </li>
+                <li class="mb-2">
+                  Movimiento con grados de libertad que imita y mejora la
+                  articulación de la mano humana
+                </li>
+                <li class="mb-2">
+                  Cáncer: un abordaje con menos secuelas, más vida
+                </li>
+              </ol>
+            </h1>
+            <img
+              src="/Recibe toda la informacion y acompanamiento con una ginecoobstreta experta en cirugias laparoscopicas.webp"
+              alt="La Dra. Cesia Borjon te brinda informacion y un espacio seguro para todas tus dudas sobre cirugias laparoscopicas "
+              title="La Dra. Cesia Borjon te brinda informacion y un espacio seguro para todas tus dudas sobre cirugias laparoscopicas "
+            />
+          </div>
+
+          <div>
+            <img
+              src="/Vivir sin dolor y recibir tratamiento de vanguardia para tu bienestar integral en Tijuana con la Dra. Cesia Borjon.webp"
+              class="mb-8"
+              alt="Cirugia ginecologica de vanguardia como un derecho con la Dra. Cesia Borjon "
+              title="Cirugia ginecologica de vanguardia como un derecho con la Dra. Cesia Borjon "
+            />
+            <h1 class="font-binomaRegular md:text-xl text-[#626262]">
+              La laparoscopia y la robótica permiten manejar patologías
+              oncológicas con eficacia y menor impacto físico, se la logrado un
+              manejo exitoso del cáncer ginecológico, se ha logrado una
+              experiencia importante en cirugías complejas: histerectomía
+              radical para cáncer de cérvix, laparoscopia diagnóstica y cirugía
+              para cáncer de ovario avanzado y localizado, respectivamente, y
+              cirugía para cáncer de endometrio, incluyendo la linfadenectomía
+              retroperitoneal; además, las intervenciones menos complejas, como
+              histerectomías y anexectomías.
+              <br />
+              <br />
+
+              Porque no se trata de sobrevivir un diagnóstico sino dignificar
+              todo el proceso, como paciente mereces recibir un acompañamiento y
+              tratamiento de calidad que más que curarte te empodere.
+              <br />
+              <br />
+
+              Como ginecólogas obstetras comprometidas con la autonomía de las
+              mujeres, enfatizamos en una cirugía mínima como esencial ya que es
+              un abordaje muy seguro, eficaz y respetuoso que permite una
+              recuperación rápida que le permite reincorporarse a sus
+              actividades diarias, a su empoderamiento a su autonomía corporal
+              <br />
+              <br />
+
+              Como ginecóloga-obstetra estoy comprometida con la autonomía de
+              mis pacientes, considero la cirugía mínimamente invasiva como una
+              opción esencial: segura, eficaz y respetuosa con el cuerpo.
+              Permite una recuperación más rápida, facilitando la reintegración
+              a la vida cotidiana y reforzando la autonomía y el empoderamiento
+              de cada paciente.
+            </h1>
+          </div>
+        </div>
+        <div class="bg-[#B09FCD] w-full py-8 rounded-3xl mb-8">
+          <h1 class="text-center md:text-3xl font-glorich text-white py-4 px-8">
+            “Recuerda que tu bienestar es lo primordial.”
+          </h1>
+        </div>
+        <h2 class="font-binomaRegular md:text-xl text-[#626262]">
+          Para determinar si eres candidatx a un procedimiento mínimamente
+          invasivo es necesario generar un espacio de dialogo con tus
+          especialistas, donde te proporcionen alternativas, en caso de que no
+          se te ofrezcan, no dudes en buscar una segunda opinión.
+          <br />
+          <br />
+          Tu cuerpo es tuyo. Ante cualquier intervención, te animo a preguntar y
+          exigir opciones que respeten tu bienestar integral. Estamos aquí para informarte,
+          acompañarte y defender tu derecho a una medicina que escuche y priorice
+          tu voz.
+        </h2>
+        <br />
+
+        <br />
+
+        <hr class="mb-4" />
+      </div>
+      <aside class="md:w-[25%] p-4 hidden md:block">
+        <div class="bg-white bg-opacity-60 mb-4 rounded-3xl p-4">
+          <div class="border border-[#B09FCD] w-[169px] mb-4"></div>
+          <h1 class="font-glorich font-black text-3xl mb-4 text-[#626262]">
+            ÚLTIMOS BLOGS
+          </h1>
+          <div class="flex gap-4 items-start flex-col">
+            {
+              posts.map((post) => (
+                <ul>
+                  <div class="flex flex-col items-start">
+                    <a href={post.link}>
+                      <li
+                        class="text-black
+                    font-glorich font-black md:text-xl mb-8  uppercase"
+                      >
+                        {post.title}
+                      </li>
+                    </a>
+                    <li
+                      class="text-[#C0BCBC]
+                    font-glorich font-black md:text-xl  uppercase"
+                    >
+                      {post.date}
+                    </li>
+                    <li
+                      class="text-[#C0BCBC]
+                      font-glorich font-black md:text-xl  uppercase"
+                    >
+                      <a href={post.link}>Ver Blog</a>
+                    </li>
+                  </div>
+                </ul>
+              ))
+            }
+          </div>
+        </div>
+
+        <img
+          src="/Sientete segurx  con la Dra.  Cesia experta en  nacimiento  respetado y  ginecologia.webp"
+          alt="En Tijuana Siéntete segurx con la Dra. Cesia experta en nacimiento respetado y ginecología"
+          title="En Tijuana Siéntete segurx con la Dra. Cesia experta en nacimiento respetado y ginecología"
+        />
+      </aside>
+    </div>
+  </main>
+</Layout>

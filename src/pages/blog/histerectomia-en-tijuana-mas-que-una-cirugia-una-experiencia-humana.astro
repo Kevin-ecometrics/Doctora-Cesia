@@ -1,0 +1,197 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { fade } from "astro:transitions";
+import posts from "@components/blogs/blogList";
+
+let title =
+  "Duelo después de una histerectomía: Más que una cirugía, una experiencia humana";
+---
+
+<Layout title={title}>
+  <main transition:animate={fade({ duration: "1s" })}>
+    <img
+      src="/Descubre las ventajas de una histerectomia laparoscopica.webp"
+      class="w-full"
+      alt="Todo lo que debes saber sobre una histerectomia laparoscopica en tijuana "
+      title="Todo lo que debes saber sobre una histerectomia laparoscopica en tijuana "
+    />
+    <div class="px-8 flex gap-4 bg-[#7DCAD9] py-8">
+      <div class="md:w-[80%] p-4 bg-white rounded-3xl overflow-x-hidden h-full">
+        <aside class="p-4 block md:hidden">
+          <div class="bg-white bg-opacity-60 mb-4 rounded-3xl p-4">
+            <div class="border border-[#B09FCD] w-[169px] mb-4"></div>
+            <h1 class="font-glorich font-black text-3xl mb-4 text-[#626262]">
+              ÚLTIMOS BLOGS
+            </h1>
+            <div class="flex gap-4 items-start flex-col">
+              {
+                posts.map((post) => (
+                  <ul>
+                    <div class="flex flex-col items-start">
+                      <a href={post.link}>
+                        <li
+                          class="text-black
+                      font-glorich font-black md:text-xl mb-8  uppercase"
+                        >
+                          {post.title}
+                        </li>
+                      </a>
+                      <li
+                        class="text-[#C0BCBC]
+                      font-glorich font-black md:text-xl  uppercase"
+                      >
+                        {post.date}
+                      </li>
+                      <li
+                        class="text-[#C0BCBC]
+                      font-glorich font-black md:text-xl  uppercase"
+                      >
+                        <a href={post.link}>Ver Blog</a>
+                      </li>
+                    </div>
+                  </ul>
+                ))
+              }
+            </div>
+          </div>
+        </aside>
+        <div class="flex gap-8 mb-8">
+          <div class="border bg-[#7DCAD9] w-4 border-[#7DCAD9]"></div>
+          <div class="flex flex-col">
+            <h1
+              class="font-glorich font-black text-2xl md:text-4xl text-[#B09FCD]"
+            >
+              Duelo después de una histerectomía: Más que una cirugía, una
+              experiencia humana
+            </h1>
+          </div>
+        </div>
+        <h1 class="py-4 md:text-xl text-[#626262] mb-8">
+          Según la Organización Mundial de la Salud (2023), la histerectomía es
+          la segunda cirugía ginecológica más frecuente a nivel global, solo
+          superada por la cesárea. Sin embargo, su impacto trasciende lo físico:
+          Implica una transformación emocional profunda, ligada a construcciones
+          culturales que equiparan el útero con la identidad femenina.
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div>
+            <h1 class="font-binomaRegular md:text-xl text-[#626262] mb-8">
+              <strong>El cuerpo como territorio simbólico </strong>
+              <br /> Cada cuerpo, mente y corazón es único, aunque el útero no sea
+              visible, se hace visible ante su ausencia. Para muchas personas, este
+              proceso desencadena un duelo, a menudo puede venir acompañado de cambios
+              hormonales, que pueden afectar la autopercepción. En pleno 2025, persisten
+              estereotipos que estigmatizan a quienes viven esta experiencia, asociándolas
+              con conceptos como "vacío" o "pérdida" inclusive son perpetuadas como
+              celosas de aquellas mujeres que pueden gestar.
+              <br />
+              <br />
+
+              <strong>Rompiendo paradigmas </strong>
+              <br />
+
+              Contrario a narrativas de perdida, existe evidencia en la que la
+              histerectomía para algunas mujeres fue una forma de mejorar
+              significativamente su calidad de vida, salir, pasear sin dolor
+              permitiéndoles recuperar su autonomía. La histerectomía es
+              entonces un acto de autocuidado que devuelve la capacidad de
+              existir en paz.
+              <br />
+            </h1>
+            <img
+              src="/La histerectomia es una cirugia que extirpa el utero para tratar diversas anomalias ginecologicas.webp"
+              alt="La histerectomia consiste en extirpar el utero,puede tambien retirarse cuello, ovarios y trompas de falopio "
+              title="La histerectomia consiste en extirpar el utero,puede tambien retirarse cuello, ovarios y trompas de falopio "
+            />
+          </div>
+
+          <div>
+            <img
+              src="/Histerectomia en Tijuana con  Dra. Cesia Borjon experta en cirugias de minima invasion.webp"
+              class="mb-8"
+              alt="histerectomia minimamente invasiva en Tijuana"
+              title="histerectomia minimamente invasiva en Tijuana"
+            />
+            <h1 class="font-binomaRegular md:text-xl text-[#626262]">
+              <strong> Acompañamiento desde la diversidad </strong>
+              <br />
+              Es crucial como especialistas, rechazar comparaciones y enfatizar que
+              no todxs lxs pacientes experimentan el mismo proceso. Algunxs atraviesan
+              ansiedad o depresión, otras no. Ninguna de estas difencias las hacen
+              ser sujeto de comparación, ni existe una forma correcta o incorrecta
+              de vivirlo. Nuestra labor como especialistas es acompañar y entender
+              la individualidad de cada paciente y ver en pro de su salud integral,
+              sugerir herramientas, redes de apoyo que permitan acuerpar este proceso
+              de la mejor manera posible con resiliencia y respeto.
+            </h1>
+          </div>
+        </div>
+        <div class="bg-[#B09FCD] w-full py-8 rounded-3xl mb-8">
+          <h1 class="text-center md:text-3xl font-glorich text-white py-4 px-8">
+            “Recuerda: No estas solx, tu valor no se mide en tu capacidad
+            reproductiva”
+          </h1>
+        </div>
+        <h2 class="font-binomaRegular md:text-xl text-[#626262]">
+          Además de ofrecerte atención ginecológica con enfoque en tus derechos,
+          te acompaño en un espacio seguro y de confianza para cuidar tu salud.
+          Mi práctica clínica se complementa con formación continua en cursos y
+          talleres impartidos por cirujanos laparoscopistas de reconocimiento
+          internacional, lo que me permite ofrecerte opciones de cirugía
+          mínimamente invasiva para el tratamiento de diversas patologías
+          ginecológicas. Estoy ubicada en el edificio Torre Norte 2 en Tijuana,
+          a solo 10 minutos de la garita San Ysidro–Tijuana.
+        </h2>
+        <br />
+
+        <br />
+
+        <hr class="mb-4" />
+      </div>
+      <aside class="md:w-[25%] p-4 hidden md:block">
+        <div class="bg-white bg-opacity-60 mb-4 rounded-3xl p-4">
+          <div class="border border-[#B09FCD] w-[169px] mb-4"></div>
+          <h1 class="font-glorich font-black text-3xl mb-4 text-[#626262]">
+            ÚLTIMOS BLOGS
+          </h1>
+          <div class="flex gap-4 items-start flex-col">
+            {
+              posts.map((post) => (
+                <ul>
+                  <div class="flex flex-col items-start">
+                    <a href={post.link}>
+                      <li
+                        class="text-black
+                    font-glorich font-black md:text-xl mb-8  uppercase"
+                      >
+                        {post.title}
+                      </li>
+                    </a>
+                    <li
+                      class="text-[#C0BCBC]
+                    font-glorich font-black md:text-xl  uppercase"
+                    >
+                      {post.date}
+                    </li>
+                    <li
+                      class="text-[#C0BCBC]
+                      font-glorich font-black md:text-xl  uppercase"
+                    >
+                      <a href={post.link}>Ver Blog</a>
+                    </li>
+                  </div>
+                </ul>
+              ))
+            }
+          </div>
+        </div>
+
+        <img
+          src="/Sientete segurx  con la Dra.  Cesia experta en  nacimiento  respetado y  ginecologia.webp"
+          alt="En Tijuana Siéntete segurx con la Dra. Cesia experta en nacimiento respetado y ginecología"
+          title="En Tijuana Siéntete segurx con la Dra. Cesia experta en nacimiento respetado y ginecología"
+        />
+      </aside>
+    </div>
+  </main>
+</Layout>

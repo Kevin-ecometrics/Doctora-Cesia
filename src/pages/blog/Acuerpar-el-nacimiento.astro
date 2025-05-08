@@ -2,45 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import { fade } from "astro:transitions";
 
-let categorias = [
-  "ANTICONCEPCION",
-  "EMBARAZO",
-  "PAPILOMA",
-  "MATERNINDAD",
-  "RIESGOS",
-  "DIVERSIDAD",
-];
-
-let posts = [
-  {
-    title:
-      "Acuerpar el nacimiento: La experiencia de revolucionar y empoderar el trabajo de parto",
-    date: "Junio 15, 2023",
-    link: "/blog/Acuerpar-el-nacimiento/",
-  },
-  {
-    title:
-      "La esencialidad y libertad que implica el aborto libre de estigma: Abordaje desde la perspectiva de género y derechos humanos",
-    date: "Julio 15, 2023",
-    link: "/blog/La-esencialidad-y-libertad-que-implica-el-aborto-libre-de-estigma/",
-  },
-  {
-    title: "¿Qué hacer si te han detectado el virus del papiloma humano (vph)?",
-    date: "Agosto 15, 2023",
-    link: "/blog/Que-hacer-si-te-han-detectado-el-virus-del-papiloma-humano/",
-  },
-];
-
-let tags = [
-  "DIU",
-  "EMBARAZO",
-  "VPH",
-  "ANTICONCEPCION",
-  "VIH",
-  "OBSTETRICA",
-  "BEBES",
-  "MATERNINDAD",
-];
+import posts from "@components/blogs/blogList";
 
 let title = "Acuerpar el nacimiento";
 ---
