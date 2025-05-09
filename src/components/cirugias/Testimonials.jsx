@@ -155,7 +155,7 @@ function Testimonials() {
   };
 
   return (
-    <div className="relative mx-auto container px-8 py-8 overflow-hidden">
+    <div className="relative mx-auto container md:px-4 px-2 py-8 overflow-hidden">
       <div ref={constraintsRef} className="relative">
         <motion.div
           className={`grid ${isMobile ? "grid-cols-1" : "grid-cols-2"} gap-4`}

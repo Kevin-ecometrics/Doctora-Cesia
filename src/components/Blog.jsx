@@ -44,7 +44,7 @@ const images = [
 ];
 
 const Carousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(5);
   const [isHover, setIsHover] = useState(false);
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
