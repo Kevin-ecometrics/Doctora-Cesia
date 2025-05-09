@@ -22,39 +22,39 @@ function Testimonials() {
   const testimonios = [
     {
       id: 1,
-      title: "Working with Grace was a",
-      text: "Working with Grace was a pleasure. She understood our vision and translated it into a design that exceeded our expectations.",
-      author: "OMBE",
+      title: "La mejor decisión",
+      text: "Llegué con la Dra. Cesia por una recomendación y fue la mejor decisión. Siempre resolvió nuestras dudas, llevó el final de mi embarazo increíblemente, escuchó lo que yo buscaba y para mí fue un gran apoyo en mi labor de parto. Fue clave, estuvo siempre al pendiente de mí, me fue guiando en cómo me iba a sentir. La recta final de mi labor fue increíble su acompañamiento para mi esposo y para mí. Siempre nos dio toda la información importante para tomar las mejores decisiones. Me acercó con un gran equipo de profesionales que recibieron a mi bebé. Me acompañó en mi recuperación y dudas sobre los cambios que iba sintiendo.",
+      author: "Itzia Rubio",
     },
     {
       id: 2,
-      title: "She always delivers best quality of work.",
-      text: "We have worked with Grace on multiple projects, and she always delivers quality work within the deadline. She did amazing work.",
-      author: "HUESPACE",
+      title: "Excelente médico",
+      text: "Tengo como 10 años atendiéndome con ella. ¡Excelente médico! Desde que entras al consultorio te sientes como en casa, te hace sentir en confianza, tiene un trato súper humano, responde todas tus dudas, siempre se está actualizando, y siempre al pendiente de sus pacientes. ¡La mejor gine!",
+      author: "Carmen Inzunza Medina",
     },
     {
       id: 3,
-      title: "Exceptional attention to detail",
-      text: "Grace's attention to detail is remarkable. She consistently delivers designs that are both beautiful and functional.",
-      author: "DESIGN CO.",
+      title: "Recomendadísima",
+      text: "Viajé desde Ventura, California, a mi cita de valoración postparto con la Dra. Cesia y me encontré con una persona sumamente profesional y empática. Nunca me había sentido tan cómoda. Sin duda será mi gine de confianza en Tijuana. ¡Recomendadísima!",
+      author: "Karla Ofelia",
     },
     {
       id: 4,
-      title: "Creative and professional",
-      text: "Working with Grace was a game-changer for our brand. Her creative approach combined with professionalism made the process smooth.",
-      author: "BRAND STUDIO",
+      title: "Confianza y seguridad",
+      text: "Mi experiencia con la Dra. Cesia: Soy una persona sorda, y ella es buena, atenta y tiene buena comunicación escrita. Me hizo sentir segura y con mucha confianza. En la comunidad sorda sí los recomiendo para consultar ahí ginecólogo.",
+      author: "Ileana Alexa Esacrrega Valenzuela",
     },
     {
       id: 5,
-      title: "Innovative solutions",
-      text: "Grace brought fresh ideas to our project that we hadn't even considered. Her innovative approach solved complex design challenges.",
-      author: "TECH SOLUTIONS",
+      title: "Gran corazón",
+      text: "La doctora Cesia tiene un gran corazón, sus consultas son muy humanas y muy cercanas. En lo personal amerité una cirugía y ella me atendió con MUCHO profesionalismo y con tanto amor. Una gran doctora, muy recomendada.",
+      author: "Aleyda Armenta",
     },
     {
       id: 6,
-      title: "Reliable partner",
-      text: "We've collaborated on multiple projects and Grace has always been a reliable partner, delivering on time and with exceptional quality.",
-      author: "DIGITAL AGENCY",
+      title: "Empática y analítica",
+      text: "Ella es mi gine, la de mis hijas, de las mujeres de mi familia y mis amigas. Entiende perfectamente cada incertidumbre de nuestra feminidad y te apoya con el mayor humanismo posible. Es súper empática, por supuesto inteligente y analítica para resolver cada uno de los procesos de salud que atravesamos las mujeres. ¡Más que recomendada!",
+      author: "Edith Amaro",
     },
   ];
 
@@ -192,10 +192,10 @@ function Testimonials() {
                   <path d="M9 5a2 2 0 0 1 2 2v6c0 3.13 -1.65 5.193 -4.757 5.97a1 1 0 1 1 -.486 -1.94c2.227 -.557 3.243 -1.827 3.243 -4.03v-1h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 2 -2z" />
                   <path d="M18 5a2 2 0 0 1 2 2v6c0 3.13 -1.65 5.193 -4.757 5.97a1 1 0 1 1 -.486 -1.94c2.227 -.557 3.243 -1.827 3.243 -4.03v-1h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 2 -2z" />
                 </svg>
-                <h1 className="text-3xl md:text-5xl md:h-20 font-semibold mb-4 md:mb-8 text-balance max-w-5xl font-serif">
+                <h1 className="text-3xl md:text-5xl font-semibold mb-4 md:mb-8 text-balance max-w-5xl font-serif">
                   {item.title}
                 </h1>
-                <p className="text-xl md:text-2xl md:h-20 font-binomaRegular mb-4 md:mb-8 text-balance max-w-3xl">
+                <p className="text-xl md:text-2xl font-binomaRegular mb-4 md:mb-8 text-balance ">
                   {item.text}
                 </p>
                 <span className="relative before:border-b before:border-black before:absolute before:top-1/2 before:left-0 before:w-10 before:transform before:-translate-y-1/2 pl-12 text-lg md:text-xl font-semibold text-gray-500">
