@@ -23,19 +23,22 @@ const images = [
   {
     src: "/mas-que-una-cirugia-afrontar-el-duelo-tras-una-histerectomia.webp",
     href: "/blog/histerectomia-en-tijuana-mas-que-una-cirugia-una-experiencia-humana/",
-    title: "Más que una Cirugía: Afrontar el Duelo tras una Histerectomía",
+    title:
+      " Duelo después de una histerectomía: Más que una cirugía, una experiencia humana ",
     alt: "Histerectomía en Tijuana: Más que una cirugía, una experiencia humana",
   },
   {
     src: "/cirugia-minima-invasiva-y-robotica-en-tijuana-con-cesia-borjon.webp",
     href: "/blog/Revolucionando-la-Ginecologia-Como-la-Cirugia-Minimamente-Invasiva-Mejora-la-Vida-de-las-Pacientes/",
-    title: "Cirugía mínima invasiva y robótica en Tijuana con Cesia Borjón",
+    title:
+      "Revolución en Ginecología: Menos cicatrices más autonomía con cirugía Mínimamente Invasiva y Robótica ",
     alt: "Revolucionando la ginecología con cirugía mínimamente invasiva y robótica en Tijuana",
   },
   {
     src: "/salud-cervical-que-es-la-colposcopia-y-por-que-es-importante.webp",
     href: "/blog/colposcopia-sin-miedo-empoderamiento-y-cuidado-integral-de-la-salud-femenina/",
-    title: "Salud Cervical: ¿Qué es la Colposcopia y Por Qué es Importante?",
+    title:
+      "Colposcopia: Herramienta Clave para la Detección Temprana del Cáncer Cervical ",
     alt: "Colposcopia sin miedo: Empoderamiento y cuidado integral de la salud femenina",
   },
 ];
