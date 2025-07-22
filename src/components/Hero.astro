@@ -6,6 +6,7 @@ import Facebook from "@components/assets/icons/facebook.astro";
 import Instagram from "@components/assets/icons/Instagram.astro";
 import Thread from "@components/assets/icons/thread.astro";
 import Tiktok from "@components/assets/icons/tiktok.astro";
+import Button from "./Button";
 const { title } = Astro.props;
 ---
 
@@ -45,34 +46,54 @@ const { title } = Astro.props;
     <div
       class="absolute bottom-[-30px] md:right-10 md:bottom-0 flex flex-row md:flex-col gap-4"
     >
-      <a
-        aria-label="Icono redsocial Instagram"
+      <Button
+        client:visible
+        eventName="instagram_click"
+        category="Boton"
+        label="Instagram"
         target="_blank"
+        aria-label="Icono redsocial Instagram"
         href="https://www.instagram.com/dracesiaborjonginecologa/"
+        onClick={() => {}}
       >
         <Instagram class="cursor-pointer" />
-      </a>
-      <a
-        aria-label="Icono redsocial Facebook"
+      </Button>
+      <Button
+        client:visible
+        eventName="facebook_click"
+        category="Boton"
+        label="Facebook"
         target="_blank"
+        aria-label="Icono redsocial Facebook"
         href="https://www.facebook.com/ginecologahermosillo/"
+        onClick={() => {}}
       >
         <Facebook class="cursor-pointer" />
-      </a>
-      <a
-        aria-label="Icono redsocial Tiktok"
+      </Button>
+      <Button
+        client:visible
+        eventName="tiktok_click"
+        category="Boton"
+        label="Tiktok"
         target="_blank"
+        aria-label="Icono redsocial Tiktok"
         href="https://www.tiktok.com/@ginecesiaborjon"
+        onClick={() => {}}
       >
         <Tiktok class="cursor-pointer" />
-      </a>
-      <a
-        aria-label="Icono redsocial Thread"
+      </Button>
+      <Button
+        client:visible
+        eventName="threads_click"
+        category="Boton"
+        label="Threads"
         target="_blank"
+        aria-label="Icono redsocial Thread"
         href="https://www.threads.net/@dracesiaborjonginecologa?xmt=AQGzDYoTSWZoqF1UnIXONVmb_6WfKrrWDU9QEumtdr-rddY"
+        onClick={() => {}}
       >
         <Thread class="cursor-pointer" />
-      </a>
+      </Button>
     </div>
   </div>
   <div class="absolute left-10 bottom-[-120px] hidden md:block">

@@ -8,8 +8,8 @@ import robotsTxt from "astro-robots-txt";
 // https://astro.build/config
 export default defineConfig({
   image: {
-    service: squooshImageService(),
+    service: squooshImageService()
   },
   site: "https://cesiaborjon.com/",
-  integrations: [react(), tailwind(), partytown(), sitemap(), robotsTxt()],
+  integrations: [react(), tailwind(), partytown(), sitemap(), robotsTxt()]
 });

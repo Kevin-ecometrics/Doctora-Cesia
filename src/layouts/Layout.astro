@@ -3,6 +3,7 @@ import Facebook from "@components/assets/icons/facebook.astro";
 import Instagram from "@components/assets/icons/Instagram.astro";
 import Thread from "@components/assets/icons/thread.astro";
 import Tiktok from "@components/assets/icons/tiktok.astro";
+import Button from "@components/Button";
 import Nav from "@components/Nav";
 import { ViewTransitions } from "astro:transitions";
 import { FaThreads } from "react-icons/fa6";
@@ -51,11 +52,9 @@ let LINK = Astro.url.pathname;
       content="https://cesiaborjon.com/FotoCesiaLink.webp"
     />
     <ViewTransitions />
-    <script
-      type="text/partytown"
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-3V7EN3MFR9"></script>
-    <script type="text/partytown">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3V7EN3MFR9"
+    ></script>
+    <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -63,7 +62,7 @@ let LINK = Astro.url.pathname;
       gtag("js", new Date());
       gtag("config", "G-3V7EN3MFR9");
     </script>
-    <script type="text/partytown">
+    <script is:inline>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -170,54 +169,106 @@ let LINK = Astro.url.pathname;
             <p class="mb-6">Doctora Cesia Borjón</p>
 
             <p class="mb-6">
-              <a href="mailto:doctora@cesiaborjon.com" class="hover:underline">
+              <Button
+                client:visible
+                eventName="email_click"
+                category="Boton"
+                label="Email"
+                onClick={() => {}}
+                href="mailto:doctora@cesiaborjon.com"
+                class="hover:underline"
+              >
                 doctora@cesiaborjon.com
-              </a>
+              </Button>
             </p>
 
             <p class="mb-6">
-              <a href="tel:6649763510" class="hover:underline">
+              <Button
+                client:visible
+                eventName="phone_click"
+                category="Boton"
+                label="Teléfono"
+                onClick={() => {}}
+                href="tel:6649763510"
+                class="hover:underline"
+              >
                 664 976 3510
-              </a>
+              </Button>
             </p>
             <p class="mb-8">
-              <a href="/" class="mb-6 hover:underline">
+              <Button
+                client:visible
+                eventName="website_click"
+                category="Boton"
+                label="Sitio Web"
+                onClick={() => {}}
+                href="/"
+                class="mb-6 hover:underline"
+              >
                 cesiaborjon.com
-              </a>
+              </Button>
             </p>
 
-            <a
+            <Button
+              client:visible
+              eventName="contact_click"
+              category="Boton"
+              label="Contacto"
+              onClick={() => {}}
               href="/contacto/"
               class="bg-[#FABB70] font-binomaBold font-bold rounded-full text-black px-8 py-4"
             >
               ¡CONTÁCTAME!
-            </a>
+            </Button>
           </div>
 
           <div class="hidden md:block">
             <h1 class="text-[30px] font-bold mb-8">SÍGUEME</h1>
             <div class="flex gap-4">
-              <a
+              <Button
+                client:visible
+                eventName="instagram_click"
+                category="Boton"
+                label="Instagram"
+                onClick={() => {}}
                 target="_blank"
                 href="https://www.instagram.com/dracesiaborjonginecologa/"
               >
                 <Instagram class="cursor-pointer fill-white" />
-              </a>
-              <a
+              </Button>
+              <Button
+                client:visible
+                eventName="facebook_click"
+                category="Boton"
+                label="Facebook"
+                onClick={() => {}}
                 target="_blank"
                 href="https://www.facebook.com/ginecologahermosillo/"
               >
                 <Facebook class="cursor-pointer fill-white" />
-              </a>
-              <a target="_blank" href="https://www.tiktok.com/@ginecesiaborjon">
+              </Button>
+              <Button
+                client:visible
+                eventName="tiktok_click"
+                category="Boton"
+                label="Tiktok"
+                onClick={() => {}}
+                target="_blank"
+                href="https://www.tiktok.com/@ginecesiaborjon"
+              >
                 <Tiktok class="cursor-pointer fill-white" />
-              </a>
-              <a
+              </Button>
+              <Button
+                client:visible
+                eventName="threads_click"
+                category="Boton"
+                label="Threads"
+                onClick={() => {}}
                 target="_blank"
                 href="https://www.threads.net/@dracesiaborjonginecologa?xmt=AQGzDYoTSWZoqF1UnIXONVmb_6WfKrrWDU9QEumtdr-rddY"
               >
                 <Thread class="cursor-pointer fill-white" />
-              </a>
+              </Button>
             </div>
             <p class="mb-6 mt-6">
               Registro Profesional Estatal Médico Cirujano y Partero
@@ -232,27 +283,50 @@ let LINK = Astro.url.pathname;
           <div class="block md:hidden">
             <h1 class="text-[30px] font-bold mb-8">SÍGUEME</h1>
             <div class="flex gap-4">
-              <a
+              <Button
+                client:visible
+                eventName="instagram_click"
+                category="Boton"
+                label="Instagram"
                 target="_blank"
                 href="https://www.instagram.com/dracesiaborjonginecologa/"
+                onClick={() => {}}
               >
                 <FaInstagram className="text-5xl text-black bg-white rounded-full border-[3px] p-2 border-black" />
-              </a>
-              <a
+              </Button>
+              <Button
+                client:visible
+                eventName="facebook_click"
+                category="Boton"
+                label="Facebook"
+                onClick={() => {}}
                 target="_blank"
                 href="https://www.facebook.com/ginecologahermosillo/"
               >
                 <FaFacebookF className="text-5xl text-black bg-white rounded-full border-[3px] p-2 border-black" />
-              </a>
-              <a target="_blank" href="https://www.tiktok.com/@draborjongine">
+              </Button>
+              <Button
+                client:visible
+                eventName="tiktok_click"
+                category="Boton"
+                label="Tiktok"
+                onClick={() => {}}
+                target="_blank"
+                href="https://www.tiktok.com/@draborjongine"
+              >
                 <FaTiktok className="text-5xl text-black bg-white rounded-full border-[3px] p-2 border-black" />
-              </a>
-              <a
+              </Button>
+              <Button
+                client:visible
+                eventName="threads_click"
+                category="Boton"
+                label="Threads"
+                onClick={() => {}}
                 target="_blank"
                 href="https://www.threads.net/@dracesiaborjonginecologa?xmt=AQGzDYoTSWZoqF1UnIXONVmb_6WfKrrWDU9QEumtdr-rddY"
               >
                 <FaThreads className="text-5xl text-black bg-white rounded-full border-[3px] p-2 border-black" />
-              </a>
+              </Button>
             </div>
             <p class="mb-6 mt-6">
               Registro Profesional Estatal Médico Cirujano y Partero

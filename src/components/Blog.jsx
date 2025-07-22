@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Button from "./Button";
 
 const images = [
   {
@@ -95,7 +96,12 @@ const Carousel = () => {
                 (currentIndex === images.length - 1 ? 0 : currentIndex + 1);
 
               return (
-                <a
+                <Button
+                  eventName="blog_click"
+                  category="Boton"
+                  label={blog.title}
+                  value={blog.href}
+                  onClick={() => {}}
                   key={index}
                   href={blog.href}
                   className={`absolute ${isCenter ? "z-20" : "z-10"} ${
@@ -135,14 +141,21 @@ const Carousel = () => {
                       >
                         <h3 className="text-xl font-bold mb-4">{blog.title}</h3>
                         <a href={blog.href}>
-                          <button className="text-sm  bg-[#B09FCD] text-white py-2 px-4 rounded font-bold transition duration-300 ease-in-out transform hover:scale-105">
+                          <Button
+                            eventName="blog_click"
+                            category="Boton"
+                            label={blog.title}
+                            value={blog.href}
+                            onClick={() => {}}
+                            className="text-sm  bg-[#B09FCD] text-white py-2 px-4 rounded font-bold transition duration-300 ease-in-out transform hover:scale-105"
+                          >
                             Leer más
-                          </button>
+                          </Button>
                         </a>
                       </motion.div>
                     )}
                   </motion.div>
-                </a>
+                </Button>
               );
             })}
           </div>

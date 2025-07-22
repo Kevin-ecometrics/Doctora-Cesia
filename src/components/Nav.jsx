@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Button from "./Button";
 
 function Nav({ URL }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,13 +46,16 @@ function Nav({ URL }) {
         ))}
       </ul>
 
-      <motion.a
-        whileHover={{ scale: 1.1 }}
+      <Button
         href={URL === "/agenda/" ? "/contacto/" : "/agenda/"}
         className="cursor-pointer md:block hidden hover:text-[#B09FCD] font-semibold text-xl border border-black px-6 py-2 rounded-full font-blisstwine"
+        eventName={URL === "/agenda/" ? "contact_nav_click" : "cta_nav_click"}
+        category="Boton"
+        label={URL === "/agenda/" ? "Contactarme" : "Agendar Cita"}
+        onClick={() => {}}
       >
         {URL === "/agenda/" ? "Contactarme" : "Agendar Cita"}
-      </motion.a>
+      </Button>
       <motion.div
         whileHover={{ scale: 1.1 }}
         className="cursor-pointer md:hidden block"

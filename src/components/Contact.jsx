@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
+import { SendKeyEvents } from "./utils/SendKeyEvents";
 function Contact() {
   const [form, setForm] = useState({
     name: "",
@@ -44,6 +45,13 @@ function Contact() {
       });
 
       await sendEmail;
+
+      SendKeyEvents({
+        eventName: "contact_form_submit",
+        category: "Formulario",
+        label: "Contacto",
+        value: 1,
+      });
 
       setForm({
         name: "",
