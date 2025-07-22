@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "./Button";
 
@@ -17,6 +17,15 @@ function Nav({ URL }) {
     { label: "Cirugías", path: "/cirugias/" },
   ];
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+    // Limpieza por si el componente se desmonta con el menú abierto
+    return () => document.body.classList.remove("overflow-hidden");
+  }, [isOpen]);
   return (
     <nav className=" w-screen z-50 flex items-center justify-between bg-white text-black p-8 md:h-[124px] border border-gray-400 shadow-xl">
       <div className="flex items-center">
