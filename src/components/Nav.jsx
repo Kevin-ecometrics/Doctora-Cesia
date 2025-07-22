@@ -49,7 +49,9 @@ function Nav({ URL }) {
       <Button
         href={URL === "/agenda/" ? "/contacto/" : "/agenda/"}
         className="cursor-pointer md:block hidden hover:text-[#B09FCD] font-semibold text-xl border border-black px-6 py-2 rounded-full font-blisstwine"
-        eventName={URL === "/agenda/" ? "contact_nav_click" : "cta_nav_click"}
+        eventName={
+          URL === "/agenda/" ? "contact_nav_click" : "booking_nav_click"
+        }
         category="Boton"
         label={URL === "/agenda/" ? "Contactarme" : "Agendar Cita"}
         onClick={() => {}}
