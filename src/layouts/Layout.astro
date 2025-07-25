@@ -10,7 +10,7 @@ import { FaThreads } from "react-icons/fa6";
 import { FaTiktok } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa6";
-
+import Dock from "@components/Dock.astro";
 interface Props {
   title: string;
 }
@@ -127,6 +127,7 @@ let LINK = Astro.url.pathname;
     >
     <Nav URL={LINK} client:load />
     <slot />
+    <Dock />
   </body>{
     (
       <footer class="md:h-[550px] bg-[#B09FCD] text-white px-8 py-16 md:w-[100%] mx-auto">
@@ -336,7 +337,7 @@ let LINK = Astro.url.pathname;
               Registro Profesional Estatal Especialidad en Ginecología y
               Obstetricia 031573-02/24
             </p>
-            <p>Aviso COFEPRIS 2302022002A00068</p>
+            <p class="mb-8">Aviso COFEPRIS 2302022002A00068</p>
           </div>
         </div>
       </footer>
