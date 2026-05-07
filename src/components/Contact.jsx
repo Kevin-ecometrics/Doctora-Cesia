@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
+import ReCAPTCHA from "react-google-recaptcha";
 import { SendKeyEvents } from "./utils/SendKeyEvents";
+
+const SITE_KEY = import.meta.env.PUBLIC_CAPTCHA_SITE_KEY;
+
 function Contact() {
   const [form, setForm] = useState({
     name: "",
@@ -10,6 +14,7 @@ function Contact() {
     phone: "",
     message: "",
   });
+  const recaptchaRef = useRef(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,8 +40,17 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const captchaToken = recaptchaRef.current?.getValue();
+    if (!captchaToken) {
+      toast.error("Por favor completa el captcha");
+      return;
+    }
+
     try {
-      const sendEmail = axios.post("https://cesiaborjon.com/contact", form);
+      const sendEmail = axios.post("https://cesiaborjon.com/contact", {
+        ...form,
+        captchaToken,
+      });
 
       toast.promise(sendEmail, {
         loading: "Enviando mensaje...",
@@ -60,6 +74,7 @@ function Contact() {
         phone: "",
         message: "",
       });
+      recaptchaRef.current?.reset();
     } catch (error) {
       console.error("Error al enviar el mensaje:", error);
     }
@@ -171,6 +186,9 @@ function Contact() {
                 onChange={handleChange}
                 id=""
               ></textarea>
+            </div>
+            <div className="mb-4">
+              <ReCAPTCHA ref={recaptchaRef} sitekey={SITE_KEY} />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
