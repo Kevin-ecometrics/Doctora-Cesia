@@ -1,7 +1,6 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
-import ReCAPTCHA from "react-google-recaptcha";
 import { SendKeyEvents } from "./utils/SendKeyEvents";
 
 const SITE_KEY = import.meta.env.PUBLIC_CAPTCHA_SITE_KEY;
@@ -15,6 +14,32 @@ function Contact() {
     message: "",
   });
   const recaptchaRef = useRef(null);
+  const widgetIdRef = useRef(null);
+
+  useEffect(() => {
+    const renderWidget = () => {
+      window.grecaptcha.ready(() => {
+        if (recaptchaRef.current && widgetIdRef.current === null) {
+          widgetIdRef.current = window.grecaptcha.render(recaptchaRef.current, {
+            sitekey: SITE_KEY,
+          });
+        }
+      });
+    };
+
+    const scriptId = "recaptcha-script";
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement("script");
+      script.id = scriptId;
+      script.src = "https://www.google.com/recaptcha/api.js?render=explicit";
+      script.async = true;
+      script.defer = true;
+      script.onload = renderWidget;
+      document.head.appendChild(script);
+    } else {
+      renderWidget();
+    }
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -40,7 +65,10 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const captchaToken = recaptchaRef.current?.getValue();
+    const captchaToken =
+      widgetIdRef.current !== null
+        ? window.grecaptcha?.getResponse(widgetIdRef.current)
+        : null;
     if (!captchaToken) {
       toast.error("Por favor completa el captcha");
       return;
@@ -74,7 +102,9 @@ function Contact() {
         phone: "",
         message: "",
       });
-      recaptchaRef.current?.reset();
+      if (widgetIdRef.current !== null) {
+        window.grecaptcha?.reset(widgetIdRef.current);
+      }
     } catch (error) {
       console.error("Error al enviar el mensaje:", error);
     }
@@ -188,7 +218,7 @@ function Contact() {
               ></textarea>
             </div>
             <div className="mb-4">
-              <ReCAPTCHA ref={recaptchaRef} sitekey={SITE_KEY} />
+              <div ref={recaptchaRef}></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>

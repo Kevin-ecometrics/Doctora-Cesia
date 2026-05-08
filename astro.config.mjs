@@ -11,5 +11,5 @@ export default defineConfig({
     service: squooshImageService()
   },
   site: "https://cesiaborjon.com/",
-  integrations: [react(), tailwind(), partytown(), sitemap(), robotsTxt()]
+  integrations: [react(), tailwind(), partytown(), sitemap(), robotsTxt()],
 });
